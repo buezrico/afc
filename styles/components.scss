@@ -8,6 +8,9 @@
   padding: 0;
   width: 100%;
 
+  position: fixed;
+  background-color: $light;
+
   box-shadow: 0 12px 14px 0px rgba(0, 0, 0, 1);
   -webkit-box-shadow: 0 12px 14px 0px rgba(0, 0, 0, 1);
   -moz-box-shadow: 0 12px 14px 0px rgba(0, 0, 0, 1);
@@ -33,12 +36,224 @@
       margin: 0;
       li {
         margin-right: 1.5rem;
-        color: rgba(24, 24, 24, 0.9);
+        color: $secondary;
         font-size: 0.9rem;
         text-align: center;
         font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary;
+        }
       }
     }
+
+    .nav-menu-btn {
+      display: none;
+      font-size: 1.5rem;
+      color: $secondary;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .menu-btn {
+    position: fixed;
+    top: 5%;
+    right: -20%;
+    transition: all 1s;
+    // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
+    background-color: $primary;
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    height: 3rem;
+    width: 3rem;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.86);
+    -webkit-box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.86);
+    -moz-box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.86);
+
+    .menu-wrapper {
+      width: 85%;
+      height: 80%;
+      // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
+      // opacity: 0.7;
+      border-top-left-radius: 0.7rem;
+      border-bottom-left-radius: 0.7rem;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: flex-end;
+      display: flex;
+      transition: all 0.5s;
+
+      .menu-btn-box {
+        margin-right: 0.5rem;
+        width: 80%;
+        height: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+
+        .box {
+          height: 0.15rem;
+          width: 80%;
+          background-color: $light;
+          border-radius: 50px;
+          transition: all 0.5s linear;
+          transform-origin: 1px;
+        }
+      }
+    }
+    &:hover {
+      .menu-wrapper {
+        box-shadow: 1px 1px 5px #0c0c3b, -1px -5px 5px #010102;
+      }
+    }
+  }
+
+  .show-menu-btn {
+    right: 0;
+  }
+
+  .menu-btn-close {
+    border-radius: 50%;
+    background-color: transparent;
+    right: 10%;
+    justify-content: center;
+
+    .menu-wrapper {
+      justify-content: center;
+      border-radius: 50%;
+
+      .menu-btn-box {
+        margin: 0;
+        align-items: center;
+        // justify-content: center;
+        // background-color: red;
+
+        .box1 {
+          transform: rotate(45deg);
+        }
+        .box2 {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        .box3 {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(24, 96, 221, 0.9);
+    // background-color: rgba(255, 255, 255, 0.6);
+    // background-color: rgba(60, 164, 85, 0.9);
+    // border-bottom-left-radius: 90%;
+    // border-bottom-right-radius: 100%;
+    z-index: 3;
+    top: 0;
+    left: -100%;
+    // left: 0;
+    transition: all 1s ease-in-out;
+    // transition: all 0.5s cubic-bezier(0.475, 0.385, 0.32, 10.275);
+    // transform-origin: top left;
+
+    .first-wrapper {
+      // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
+      border-radius: 100% 0% 100% 0% / 0% 45% 55% 100%;
+      // box-shadow: 2px 2px 10px #0c0c3b, -1px -5px 5px #010102;
+
+      height: 100%;
+
+      .second-wrapper {
+        // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
+        border-radius: 100% 0% 100% 0% / 0% 1% 99% 100%;
+        // box-shadow: 2px 2px 10px #0c0c3b, -1px -5px 5px #010102;
+        height: 100%;
+        padding: 3rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        ul {
+          height: 80%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .nav-item {
+            color: $light;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover {
+              color: $secondary;
+            }
+          }
+
+          .donate-btn {
+            button {
+              padding: 0.4rem 2rem;
+            }
+          }
+        }
+
+        .nav-logo {
+          width: 5rem;
+          height: 5rem;
+          padding: 0.5rem;
+          border-radius: 50%;
+          // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
+          background-color: $light;
+          box-shadow: 2px 2px 10px #0c0c3b, -1px -5px 5px #010102;
+        }
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      width: 100%;
+      bottom: 10%;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        color: $secondary;
+        border: 2px solid $secondary;
+        margin: 0;
+        font-size: 2.5rem;
+        padding: 0.3rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: $light;
+        }
+      }
+    }
+  }
+
+  .show-menu {
+    // top: 0;
+    left: 0;
   }
 
   @media screen and (max-width: 1050px) {
@@ -64,6 +279,8 @@
     }
   }
   @media screen and (max-width: 768px) {
+    position: absolute;
+
     .inner {
       ul {
         display: none;
@@ -72,8 +289,17 @@
           margin-right: 1rem;
         }
       }
+
+      .donate-btn {
+        display: none;
+      }
+
+      .nav-menu-btn {
+        display: flex;
+      }
     }
   }
+
   @media screen and (max-width: 512px) {
   }
 }
@@ -161,6 +387,27 @@
     padding: 2rem 1.5rem;
     .inner {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.page-top {
+  .title {
+    height: 50vh;
+    padding: 5rem;
+    border-bottom: 2px solid $primary;
+    border-top: 2px solid $primary;
+    color: $light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title-text {
+      padding-top: 5rem;
+      // background-color: #fff;
+      h1 {
+        font-weight: 900;
+      }
     }
   }
 }

@@ -2,7 +2,8 @@
 @import "/styles/components.scss";
 
 header {
-  height: 100vh;
+  min-height: 100vh;
+  // min-height: calc(100vh - 4rem);
   width: 100%;
   background: url("../public/imgs/headerbg.png"), rgba(5, 2, 32, 0.8);
   background-position: center;
@@ -44,6 +45,7 @@ header {
     .header-btns {
       margin-top: 2rem;
       display: flex;
+      justify-content: space-between;
 
       button {
         font-size: 0.9rem;
@@ -79,7 +81,7 @@ header {
 }
 
 .who-we-are {
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
 
@@ -411,8 +413,11 @@ header {
       h1 {
         font-size: 2rem;
       }
+
       .header-btns {
         width: 90%;
+        flex-direction: column;
+        // background-color: #fff;
       }
     }
     .scrolldown {
