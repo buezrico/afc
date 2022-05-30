@@ -1,0 +1,145 @@
+@import "./variable";
+@import "/styles/components.scss";
+
+.about {
+  .about-intro {
+    padding: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    &-img {
+      // min-width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-text {
+      // margin-right: 2rem;
+      text-align: justify;
+      margin-right: 1rem;
+      max-width: 60%;
+    }
+
+    &-text-alt {
+      display: none;
+    }
+  }
+
+  .about-objectives {
+    padding: 3rem;
+
+    .objectives {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1.5rem;
+      .objective {
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        i {
+          margin-right: 1rem;
+          color: $secondary;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .about-targets {
+    background: url("../public/imgs/memberbg.png"), rgba(12, 11, 66, 0.99);
+    background-position: center;
+    background-blend-mode: multiply;
+    background-size: cover;
+
+    .inner {
+      padding: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $light;
+
+      .top {
+        .targets {
+          .target {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            i {
+              margin-right: 1rem;
+            }
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .about-objectives {
+    .objectives {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    .about-intro {
+      flex-direction: column-reverse;
+
+      &-text {
+        max-width: 100%;
+        margin-right: 0;
+
+        text-align: justify;
+
+        .text3 {
+          display: none;
+        }
+      }
+
+      &-text-alt {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    .about-objectives {
+      .objectives {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .about-targets {
+      .inner {
+        flex-direction: column;
+
+        .top {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 512px) {
+  .about {
+    .about-intro {
+      padding: 1.5rem;
+    }
+    .about-objectives {
+      padding: 1.5rem;
+    }
+    .about-targets {
+      .inner {
+        padding: 3rem 1.5rem;
+      }
+    }
+  }
+}
