@@ -20,13 +20,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3rem;
+    padding: 0 5rem;
     width: 100%;
     height: 4rem;
 
     .navbar-brand {
       width: 5rem;
       padding: 0;
+      cursor: pointer;
     }
 
     ul {
@@ -258,7 +259,7 @@
 
   @media screen and (max-width: 1050px) {
     .inner {
-      padding: 0 2.5rem;
+      padding: 0 3rem;
       .navbar-brand {
         width: 4rem;
 
@@ -304,6 +305,9 @@
   }
 
   @media screen and (max-width: 512px) {
+    .inner {
+      padding: 1.5rem;
+    }
   }
 }
 
@@ -396,7 +400,7 @@
 
 .page-top {
   .title {
-    height: 50vh;
+    height: 60vh;
     padding: 5rem;
     border-bottom: 2px solid $primary;
     border-top: 2px solid $primary;
@@ -411,6 +415,13 @@
       h1 {
         font-weight: 900;
       }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .title {
+      padding: 1.5rem;
+      height: 40vh;
     }
   }
 }

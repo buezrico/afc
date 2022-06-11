@@ -9,7 +9,6 @@ const PagesTop = (props) => {
           background: `url("${props.bg}"), rgba(6, 4, 29, 0.8)`,
           backgroundAttachment: "fixed",
           backgroundSize: "center",
-          //   backgroundPosition: "left",
           backgroundBlendMode: "multiply",
           backgroundRepeat: "no-repeat",
         }}

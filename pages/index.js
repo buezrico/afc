@@ -23,8 +23,14 @@ export default function Home() {
           </small>
 
           <div className="header-btns">
-            <button className="btn btn-primary">Donate</button>
-            <button className="btn btn-outline-light">Join the Movement</button>
+            <Link href="/donate">
+              <button className="btn btn-primary">Donate</button>
+            </Link>
+            <Link href="/register">
+              <button className="btn btn-outline-light">
+                Join the Movement
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -197,7 +203,9 @@ export default function Home() {
               We have more to do and welcome you to join us to achieve more.
             </p>
             <div className="bottom">
-              <button className="btn btn-outline-light">Join Us Today</button>{" "}
+              <Link href="/register">
+                <button className="btn btn-outline-light">Join Us Today</button>
+              </Link>
               <div className="bottom-img">
                 <Image
                   src="/imgs/member.svg"
@@ -232,7 +240,9 @@ export default function Home() {
               Every year we have series of events scheduled to hold at different
               times of the year.{" "}
             </p>
-            <button className="btn btn-primary">View Events</button>
+            <Link href="/events">
+              <button className="btn btn-primary">View Events</button>
+            </Link>
           </div>
           <hr />
           <div className="content">
@@ -242,7 +252,9 @@ export default function Home() {
               All our events are captured for all the right reasons. Visit our
               Media Gallery to see highlights of all events.
             </p>
-            <button className="btn btn-primary">View Gallery</button>
+            <Link href="/gallery">
+              <button className="btn btn-primary">View Gallery</button>
+            </Link>
           </div>
         </div>
       </section>

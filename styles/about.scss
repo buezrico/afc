@@ -3,7 +3,7 @@
 
 .about {
   .about-intro {
-    padding: 3rem;
+    padding: 0 5rem;
 
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
   }
 
   .about-objectives {
-    padding: 3rem;
+    padding: 5rem;
 
     .objectives {
       display: grid;
@@ -56,7 +56,7 @@
     background-size: cover;
 
     .inner {
-      padding: 3rem;
+      padding: 5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -79,12 +79,136 @@
       }
     }
   }
+
+  .about-coordinator {
+    .inner {
+      padding-right: 5rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $secondary;
+      color: $light;
+
+      .coordinator-pic {
+        height: 70vh;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        background: url("../public/imgs/cordinator.png");
+
+        background-position: -5rem 5rem;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .bg {
+          background-color: rgba(60, 164, 85, 0.5);
+          // width: 100%;
+          padding: 2rem;
+          display: flex;
+          justify-content: center;
+          border-radius: 0 25% 0 25%;
+
+          .title {
+            z-index: 1;
+
+            .title-text {
+              width: max-content;
+
+              p {
+                margin: 0;
+              }
+            }
+
+            .closing-quote {
+              transform: rotate(180deg);
+              // display: flex;
+              // width: 100%;
+              // justify-content: center;
+            }
+          }
+        }
+
+        // .img {
+        //   z-index: 1;
+        // }
+
+        // .coordinator-pic-bg {
+        //   width: 50%;
+        //   height: 20rem;
+
+        //   // top: 0;
+        //   // margin-left: -5rem;
+        //   .inner {
+        //     width: 100%;
+        //     height: 100%;
+        //     background-color: rgba(60, 164, 85, 0.7);
+        //     display: flex;
+        //     // align-items: baseline;
+        //     justify-content: flex-end;
+        //   }
+        // }
+      }
+
+      .about-coordinator-text {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+          margin: 0;
+          font-weight: 500;
+        }
+
+        p:nth-child(2) {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1050px) {
-  .about-objectives {
-    .objectives {
-      grid-template-columns: repeat(2, 1fr);
+  .about {
+    .about-objectives {
+      padding: 3rem;
+      .objectives {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .about-intro {
+      padding: 3rem;
+    }
+
+    .about-targets {
+      .inner {
+        padding: 3rem;
+      }
+    }
+
+    .about-coordinator {
+      .inner {
+        padding-right: 3rem;
+
+        .coordinator-pic {
+          width: 50%;
+          height: 80vh;
+          background-position: -7rem 5rem;
+        }
+        .about-coordinator-text {
+          width: 40%;
+        }
+      }
     }
   }
 }
@@ -126,6 +250,27 @@
         }
       }
     }
+
+    .about-coordinator {
+      .inner {
+        padding: 0;
+        flex-direction: column;
+
+        .coordinator-pic {
+          width: 100vw;
+          height: 80vh;
+          background-position: center;
+          background-size: cover;
+          margin: 0;
+        }
+        .about-coordinator-text {
+          width: 100%;
+          padding: 3rem;
+          z-index: 1;
+          text-align: justify;
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 512px) {
@@ -139,6 +284,25 @@
     .about-targets {
       .inner {
         padding: 3rem 1.5rem;
+      }
+    }
+    .about-coordinator {
+      .inner {
+        .about-coordinator-text {
+          padding: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .about {
+    .about-coordinator {
+      .inner {
+        .coordinator-pic {
+          background-position: -15rem center;
+        }
       }
     }
   }

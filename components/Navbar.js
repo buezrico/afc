@@ -71,9 +71,14 @@ const Navbar = () => {
                 </li>
               </Link>
 
-              <div className="donate-btn">
-                <button className="btn btn-secondary">DONATE</button>
-              </div>
+              <Link href="/donate">
+                <div
+                  className="donate-btn"
+                  onClick={() => setShowMenu(!showMenu)}
+                >
+                  <button className="btn btn-secondary">DONATE</button>
+                </div>
+              </Link>
             </ul>
           </div>
         </div>
@@ -84,16 +89,18 @@ const Navbar = () => {
       </div>
 
       <div className="inner">
-        <div className="navbar-brand">
-          <Image
-            src="/imgs/afclogo.png"
-            width="100%"
-            height="100%"
-            layout="responsive"
-            unoptimized
-            alt="brand-logo"
-          />
-        </div>
+        <Link href="/">
+          <div className="navbar-brand">
+            <Image
+              src="/imgs/afclogo.png"
+              width="100%"
+              height="100%"
+              layout="responsive"
+              unoptimized
+              alt="brand-logo"
+            />
+          </div>
+        </Link>
 
         <ul className="nav-items">
           <Link href="/">
@@ -116,10 +123,11 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        <div className="donate-btn">
-          <button className="btn btn-secondary">DONATE</button>
-        </div>
-
+        <Link href="/donate">
+          <div className="donate-btn">
+            <button className="btn btn-secondary">DONATE</button>
+          </div>
+        </Link>
         <div className="nav-menu-btn" onClick={() => setShowMenu(!showMenu)}>
           <i className="fas fa-bars"></i>
         </div>

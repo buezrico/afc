@@ -1,0 +1,109 @@
+@import "./variable";
+
+.donation {
+  .donation-wrapper {
+    .inner {
+      padding: 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $light;
+
+      .title {
+        color: $secondary;
+        margin-bottom: 3rem;
+      }
+      .donation-form {
+        background-color: $light;
+        width: 50%;
+        box-shadow: 1px 1px 5px #b8b8c4, -1px -5px 5px #c8c8d3;
+        border-radius: 25px;
+        padding: 2rem;
+
+        form {
+          width: 100%;
+
+          input,
+          textarea,
+          button {
+            width: 100%;
+            margin-bottom: 1rem;
+          }
+
+          input,
+          textarea {
+            background-color: white;
+            padding: 0.5rem;
+            border: none;
+          }
+        }
+      }
+      .bank-details {
+        width: 40%;
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .account-details {
+          .account-detail {
+            margin-bottom: 2rem;
+            p {
+              margin: 0;
+              margin-bottom: 0.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    .donation-wrapper {
+      .inner {
+        padding: 3rem;
+
+        .donation-form {
+          width: 60%;
+        }
+        .bank-details {
+          width: 30%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .donation-wrapper {
+      .inner {
+        padding: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        .donation-form {
+          width: 100%;
+          padding: 2rem;
+          margin-bottom: 2rem;
+        }
+        .bank-details {
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 512px) {
+    .donation-wrapper {
+      .inner {
+        padding: 1.5em;
+
+        .donation-form {
+          padding: 1.5rem;
+        }
+      }
+    }
+  }
+}

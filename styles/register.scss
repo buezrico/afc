@@ -1,0 +1,83 @@
+@import "./variable";
+
+.register {
+  .register-wrapper {
+    padding: 5rem;
+
+    .register-form {
+      form {
+        width: 100%;
+
+        input,
+        select {
+          width: 100%;
+          border-radius: 5px;
+          background: transparent;
+          border: 1px solid $mute;
+          padding: 0.5rem;
+        }
+
+        .custom-form-group {
+          margin-top: 2rem;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 1rem;
+        }
+
+        .accept-terms {
+          display: flex;
+          align-items: center;
+          margin: 1rem 0;
+          p {
+            margin: 0;
+          }
+
+          input {
+            width: unset;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    .register-wrapper {
+      padding: 3rem;
+
+      .register-form {
+        form {
+          .custom-form-group {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .register-wrapper {
+      padding: 3rem;
+
+      .register-form {
+        form {
+          .custom-form-group {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 512px) {
+    .register-wrapper {
+      padding: 1.5rem;
+
+      .register-form {
+        form {
+          .custom-form-group {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+      }
+    }
+  }
+}

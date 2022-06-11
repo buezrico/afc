@@ -1,6 +1,11 @@
 @import "./variable";
-@import "/styles/components.scss";
-@import "/styles/about.scss";
+@import "./components.scss";
+@import "./about.scss";
+@import "./contact.scss";
+@import "./donation.scss";
+@import "./register.scss";
+@import "./events.scss";
+@import "./gallery.scss";
 
 header {
   min-height: 100vh;
@@ -93,7 +98,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem;
+    padding: 5rem;
 
     // .about-pic {
     //   width: 50%;

@@ -54,6 +54,44 @@ const About = () => {
         </div>
       </section>
 
+      <section className="about-targets">
+        <div className="inner">
+          <div className="top">
+            <h4 className="fw-bold title text-light">OUR TARGETS</h4>
+            <ul className="targets">
+              <li className="target">
+                <i className="fas fa-crosshairs"></i>
+                <p>
+                  Increase our membership drive by organizing skills acquisition
+                  programs.
+                </p>
+              </li>
+              <li className="target">
+                <i className="fas fa-crosshairs"></i>
+                <p>Support 3 members in business</p>
+              </li>
+              <li className="target">
+                <i className="fas fa-crosshairs"></i>
+                <p>Register 20 AFC members in JAMB</p>
+              </li>
+              <li className="target">
+                <i className="fas fa-crosshairs"></i>
+                <p>Enhancing Leadership development amongst AFC members.</p>
+              </li>
+            </ul>
+          </div>
+          <div className="member-pic">
+            <Image
+              src="/imgs/target.svg"
+              width={300}
+              height={300}
+              alt="become-a-meber"
+              unoptimized
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="about-objectives">
         <h3 className="title fw-bold text-secondary">OUR OBJECTIVES</h3>
 
@@ -145,40 +183,53 @@ const About = () => {
         </ul>
       </section>
 
-      <section className="about-targets">
+      <section className="about-coordinator">
         <div className="inner">
-          <div className="top">
-            <h4 className="fw-bold title text-light">OUR TARGETS</h4>
-            <ul className="targets">
-              <li className="target">
-                <i className="fas fa-crosshairs"></i>
-                <p>
-                  Increase our membership drive by organizing skills acquisition
-                  programs.
-                </p>
-              </li>
-              <li className="target">
-                <i className="fas fa-crosshairs"></i>
-                <p>Support 3 members in business</p>
-              </li>
-              <li className="target">
-                <i className="fas fa-crosshairs"></i>
-                <p>Register 20 AFC members in JAMB</p>
-              </li>
-              <li className="target">
-                <i className="fas fa-crosshairs"></i>
-                <p>Enhancing Leadership development amongst AFC members.</p>
-              </li>
-            </ul>
+          <div className="coordinator-pic">
+            <div className="bg-mobile"></div>
+            <div className="bg">
+              <div className="title">
+                <div className="opening-quote">
+                  <Image
+                    src="/imgs/quote.png"
+                    width={30}
+                    height={30}
+                    alt="quote"
+                  />
+                </div>
+                <div className="title-text">
+                  <p className="fw-bold">CORDINATOR</p>
+                  <h4 className="fw-bold">Uyi Eunice Umashime</h4>
+                </div>
+                <div className="closing-quote">
+                  <Image
+                    src="/imgs/quote.png"
+                    width={30}
+                    height={30}
+                    alt="quote"
+                    className="img2"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="member-pic">
-            <Image
-              src="/imgs/target.svg"
-              width={300}
-              height={300}
-              alt="become-a-meber"
-              unoptimized
-            />
+
+          <div className="about-coordinator-text">
+            <p>
+              Uyi Eunice Simeon, from Odieke-Ugbobi Community in Ahoada West
+              Local Government Area , Rivers State .
+            </p>
+            <p>
+              A graduate of Rivers State University, faculty of Education where
+              she took Adult Education and Community Development as a discipline
+              in her first degree.
+            </p>
+            <p>
+              She served as the former Special Assistant on Student Affairs to
+              Hon. (Evang) Hope O. Ikiriko, PhD, CNA, FNES . In the between 2018
+              - 2021 and currently the Deputy Chief of staff his return as the
+              Local Government Chairman in his 2nd tenure .
+            </p>
           </div>
         </div>
       </section>
