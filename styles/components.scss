@@ -36,7 +36,7 @@
       height: inherit;
       margin: 0;
       li {
-        margin-right: 1.5rem;
+        margin-right: 2rem;
         color: $secondary;
         font-size: 0.9rem;
         text-align: center;
@@ -51,78 +51,76 @@
 
     .nav-menu-btn {
       display: none;
-      font-size: 1.5rem;
-      color: $secondary;
-      cursor: pointer;
+      .menu-btn {
+        position: fixed;
+        top: 1%;
+        right: 5%;
+        border-radius: 15px;
+        height: 3rem;
+        width: 3rem;
+        z-index: 999;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
+        cursor: pointer;
+        box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.86);
+        -webkit-box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.86);
+        -moz-box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.86);
+        transition: all 1.5s;
 
-      &:hover {
-        color: $primary;
-      }
-    }
-  }
+        .menu-wrapper {
+          width: 85%;
+          height: 80%;
+          background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
+          border-radius: 15px;
 
-  .menu-btn {
-    position: fixed;
-    display: none;
-    top: 5%;
-    right: -20%;
-    transition: all 1s;
-    // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
-    background-color: $primary;
-    border-top-left-radius: 0.7rem;
-    border-bottom-left-radius: 0.7rem;
-    height: 3rem;
-    width: 3rem;
-    z-index: 999;
-    align-items: center;
-    justify-content: flex-end;
-    cursor: pointer;
+          // opacity: 0.7;
 
-    box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.86);
-    -webkit-box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.86);
-    -moz-box-shadow: -1px 2px 4px 1px rgba(0, 0, 0, 0.86);
+          box-sizing: border-box;
+          align-items: center;
+          justify-content: flex-end;
+          display: flex;
+          transition: all 0.5s;
 
-    .menu-wrapper {
-      width: 85%;
-      height: 80%;
-      // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
-      // opacity: 0.7;
-      border-top-left-radius: 0.7rem;
-      border-bottom-left-radius: 0.7rem;
-      box-sizing: border-box;
-      align-items: center;
-      justify-content: flex-end;
-      display: flex;
-      transition: all 0.5s;
+          .menu-btn-box {
+            margin-right: 0.5rem;
+            width: 80%;
+            height: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-end;
 
-      .menu-btn-box {
-        margin-right: 0.5rem;
-        width: 80%;
-        height: 55%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-end;
-
-        .box {
-          height: 0.15rem;
-          width: 80%;
-          background-color: $light;
-          border-radius: 50px;
-          transition: all 0.5s linear;
-          transform-origin: 1px;
+            .box {
+              height: 0.15rem;
+              background-color: $light;
+              border-radius: 50px;
+              transition: all 0.5s linear;
+              transform-origin: 2px;
+            }
+            .box1 {
+              width: 75%;
+            }
+            .box2 {
+              width: 50%;
+            }
+            .box3 {
+              width: 60%;
+            }
+          }
+        }
+        &:hover {
+          .menu-wrapper {
+            box-shadow: 1px 1px 5px #0c0c3b, -1px -5px 5px #010102;
+          }
         }
       }
-    }
-    &:hover {
-      .menu-wrapper {
-        box-shadow: 1px 1px 5px #0c0c3b, -1px -5px 5px #010102;
+
+      .show-menu-btn {
+        top: 4%;
+        right: 2%;
       }
     }
-  }
-
-  .show-menu-btn {
-    right: 0;
   }
 
   .menu-btn-close {
@@ -138,17 +136,17 @@
       .menu-btn-box {
         margin: 0;
         align-items: center;
-        // justify-content: center;
-        // background-color: red;
 
         .box1 {
           transform: rotate(45deg);
+          width: 80% !important;
         }
         .box2 {
           opacity: 0;
           transform: translateX(20px);
         }
         .box3 {
+          width: 80% !important;
           transform: rotate(-45deg);
         }
       }
@@ -160,29 +158,20 @@
     height: 100vh;
     width: 100%;
     background-color: rgba(24, 96, 221, 0.9);
-    // background-color: rgba(255, 255, 255, 0.6);
-    // background-color: rgba(60, 164, 85, 0.9);
-    // border-bottom-left-radius: 90%;
-    // border-bottom-right-radius: 100%;
+
     z-index: 3;
     top: 0;
     left: -100%;
     // left: 0;
     transition: all 1s ease-in-out;
-    // transition: all 0.5s cubic-bezier(0.475, 0.385, 0.32, 10.275);
-    // transform-origin: top left;
 
     .first-wrapper {
-      // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
       border-radius: 100% 0% 100% 0% / 0% 45% 55% 100%;
-      // box-shadow: 2px 2px 10px #0c0c3b, -1px -5px 5px #010102;
 
       height: 100%;
 
       .second-wrapper {
-        // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
         border-radius: 100% 0% 100% 0% / 0% 1% 99% 100%;
-        // box-shadow: 2px 2px 10px #0c0c3b, -1px -5px 5px #010102;
         height: 100%;
         padding: 3rem;
         display: flex;
@@ -216,7 +205,6 @@
           height: 5rem;
           padding: 0.5rem;
           border-radius: 50%;
-          // background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
           background-color: $light;
           box-shadow: 2px 2px 10px #0c0c3b, -1px -5px 5px #010102;
         }
@@ -253,7 +241,6 @@
   }
 
   .show-menu {
-    // top: 0;
     left: 0;
   }
 
@@ -316,26 +303,18 @@
   font-size: 0.9rem;
 
   .inner {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // place-items: start center;
-    // grid-gap: 5rem;
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
     .contact {
       width: 40%;
-      // background: #000;
       padding: 0;
       .about {
         display: flex;
-        // align-items: center;
 
         p {
           margin: 0;
-          // margin-left: 1rem;
         }
       }
       .contact-box {
@@ -387,7 +366,6 @@
       .socials {
         width: 100%;
       }
-      // place-items: end;
     }
   }
   @media screen and (max-width: 512px) {

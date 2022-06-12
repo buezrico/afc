@@ -1,8 +1,38 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
+import { PaystackButton } from "react-paystack";
 import PagesTop from "../components/PagesTop";
 
 const Register = () => {
+  const publicKey = "pk_test_d70344584529bd104ad330d0c2b132138f20c1b7";
+  const amount = 50000;
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  console.log(name);
+
+  const register = () => {
+    e.preventDefault();
+  };
+
+  const componentProps = {
+    email,
+    name,
+    phone,
+    address,
+    amount,
+    metadata: {
+      name,
+      phone,
+    },
+    publicKey,
+    text: "Submit and Make Payment",
+    onSuccess: () =>
+      alert("Thanks for doing business with us! Come back soon!!"),
+    onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+  };
+
   return (
     <div className="register">
       <Head>
@@ -44,21 +74,40 @@ const Register = () => {
           </div>
 
           <div className="register-form">
-            <form>
+            <form className="form" onSubmit={register}>
               <h5 className="fw-bold text-secondary">
                 Kindly fill the form below with your correct details
               </h5>
               <div className="custom-form-group">
-                <input type="text" placeholder="Full Name" />
-                <input type="email" placeholder="Email Address" />
-                <input type="tel" placeholder="Phone Number" />
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  id="name"
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Email Address"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Phone Number"
+                  onChange={(e) => setPhone(e.target.value)}
+                />
                 <input type="date" placeholder="Date of Birth" />
                 <select name="" id="">
                   <option value="">Gender</option>
                   <option value="male">Male</option>
                   <option value="Female">Female</option>
                 </select>
-                <input type="text" placeholder="Contact Address" />
+                <input
+                  type="text"
+                  placeholder="Contact Address"
+                  onChange={(e) => setAddress(e.target.value)}
+                />
                 <input type="text" placeholder="State of Origin" />
                 <input type="text" placeholder="LGA" />
                 <input type="text" placeholder="Ward " />
@@ -77,11 +126,12 @@ const Register = () => {
                   organization.
                 </label>
               </div>
-
-              <button className="btn btn-secondary">
-                Submit and Make Payment
-              </button>
             </form>
+
+            <PaystackButton
+              className="btn btn-primary w-100"
+              {...componentProps}
+            />
           </div>
         </div>
       </div>

@@ -92,36 +92,27 @@ export default function Home() {
       <section className="principles">
         <div className="inner">
           <div className="mission principle">
-            <h5>OUR VALUES</h5>
-            <div className="box">
-              <div className="box-inner-wrapper">
-                <div className="box-inner"></div>
-              </div>
-            </div>
+            <i className="fas fa-gem"></i>
+
+            <h6>OUR VALUES</h6>
             <p>
               Integrity, Honesty, and Recognition of Women&apos;s Unique
               Contribution.
             </p>
           </div>
           <div className="mission principle">
-            <h5>OUR MISSION</h5>
-            <div className="box">
-              <div className="box-inner-wrapper">
-                <div className="box-inner"></div>
-              </div>
-            </div>
+            <i className="fas fa-bullseye"></i>
+            <h6>OUR MISSION</h6>
+
             <p>
               To support women’s professional and personal development through
               education and training to realize individual potential.
             </p>
           </div>
           <div className="mission principle">
-            <h5>OUR VISION</h5>
-            <div className="box">
-              <div className="box-inner-wrapper">
-                <div className="box-inner"></div>
-              </div>
-            </div>
+            <i className="fas fa-eye"></i>
+            <h6>OUR VISION</h6>
+
             <p>
               To mold confident women empowered to participate in and influence
               the society they live in.

@@ -1,12 +1,24 @@
 @import "./variable";
 
 .events-page {
-  background-color: $light;
+  background: url("../public/imgs/eventbg.jpg"), rgba(5, 2, 32, 0.9);
+  padding-top: 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-attachment: fixed;
+  // height: 100vh;
   .inner {
     padding: 3rem 5rem;
+    // background-color: #fff;
+    // display: flex;
+    // justify-content: center;
 
     .title {
       margin-bottom: 2rem;
+      color: $light;
+      text-align: center;
     }
     .upcoming-events {
       margin-bottom: 3rem;
@@ -14,27 +26,32 @@
     .events {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 1rem;
+      place-items: start center;
+      grid-gap: 0.5rem;
+      width: 100%;
+      // background: #000;
       // place-items: center;
       .event {
-        background: #ffffff;
+        background: transparent;
         box-shadow: 0px 4px 19px 2px rgba(0, 0, 0, 0.05);
-        border-radius: 8px;
-        max-width: 250px;
-        min-height: max-content;
+        border-radius: 25px;
+        max-width: 300px;
+        border-left: 2px solid $primary;
+        border-right: 2px solid $primary;
+        padding: 1rem 0.5rem;
+
+        // min-height: 20rem;
         transition: all 0.5s;
 
         .event-img {
-          border-radius: 8px;
           position: relative;
           width: 100%;
-          // height: 100%;
 
           .event-date {
             position: absolute;
             left: 0;
             bottom: 0;
-            background-color: #ffffff;
+            background-color: $light;
             text-align: center;
             font-size: 0.7rem;
             padding: 0.5rem;
@@ -48,11 +65,13 @@
         }
 
         .event-details {
-          padding: 0.5rem;
+          padding: 1rem;
+          background: $light;
+          border-radius: 0 0 8px 8px;
 
           h6 {
             font-weight: 600;
-            // font-size: 0.9rem;
+            font-size: 0.9rem;
             // margin-bottom: 0;
           }
 
@@ -63,8 +82,8 @@
             margin-bottom: 0.5rem;
             small {
               font-style: italic;
-              font-size: 0.8rem;
-              font-weight: 400;
+              font-size: 0.7rem;
+              font-weight: 500;
               // margin: 0.5rem 0;
             }
           }
@@ -81,14 +100,21 @@
         }
 
         &:hover {
-          transform: scale(1.03);
+          transform: scale(1.01);
+          filter: opacity(0.8);
         }
       }
     }
 
+    .view-past-btn {
+      display: flex;
+      justify-content: center;
+    }
+
     @media screen and (max-width: 1050px) {
-      padding: 3rem;
+      padding: 3rem 1.5rem;
       .events {
+        grid-gap: 1.5rem;
         .event {
         }
       }

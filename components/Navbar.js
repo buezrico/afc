@@ -21,21 +21,6 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div
-        className={`menu-btn ${menuBtn ? "show-menu-btn" : ""} ${
-          showMenu ? "menu-btn-close" : ""
-        }`}
-        onClick={() => setShowMenu(!showMenu)}
-      >
-        <div className="menu-wrapper">
-          <div className="menu-btn-box">
-            <div className="box box1"></div>
-            <div className="box box2"></div>
-            <div className="box box3"></div>
-          </div>
-        </div>
-      </div>
-
       <div className={`mobile-menu ${showMenu ? "show-menu" : ""}`}>
         <div className="first-wrapper">
           <div className="second-wrapper">
@@ -57,12 +42,7 @@ const Navbar = () => {
               </Link>
               <Link href="/events">
                 <li onClick={() => setShowMenu(!showMenu)} className="nav-item">
-                  Events
-                </li>
-              </Link>
-              <Link href="/gallery">
-                <li onClick={() => setShowMenu(!showMenu)} className="nav-item">
-                  Gallery
+                  Our Events
                 </li>
               </Link>
               <Link href="/contact">
@@ -110,14 +90,11 @@ const Navbar = () => {
             <li className="nav-item">About Us</li>
           </Link>
           <Link href="/register">
-            <li className="nav-item">Register</li>
+            <li className="nav-item">Become a Member</li>
           </Link>
           <Link href="/events">
             <li className="nav-item">Our Events</li>
           </Link>{" "}
-          <Link href="/gallery">
-            <li className="nav-item">Gallery</li>
-          </Link>
           <Link href="/contact">
             <li className="nav-item">Contact Us</li>
           </Link>
@@ -129,7 +106,20 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="nav-menu-btn" onClick={() => setShowMenu(!showMenu)}>
-          <i className="fas fa-bars"></i>
+          <div
+            className={`menu-btn ${menuBtn ? "show-menu-btn" : ""} ${
+              showMenu ? "menu-btn-close" : ""
+            }`}
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <div className="menu-wrapper">
+              <div className="menu-btn-box">
+                <div className="box box1"></div>
+                <div className="box box2"></div>
+                <div className="box box3"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
