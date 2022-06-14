@@ -173,7 +173,11 @@ const Events = ({ events }) => {
 export default Events;
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:1337/api/events/?populate=*");
+  const res = await fetch("http://localhost:1337/api/events/?populate=*", {
+    headers: {
+      Authorization: `bearer b5f5cfe5b0eebfef12d67622de219f789eac040e8442676e9ae1d78286d4a61836261551a3cc43b824a4616697507a5e25891e6a1313c64d9bacf8bfa15efa0a830645fcbe75b333efdad83a6612ef3720b36f7a62bd0a2148f1cda26433c237fc4dd8528e4a5e2a6697b5ccf9599981246b10c059b4d92282009629e46064f2`,
+    },
+  });
   const events = await res.json();
   return {
     props: { events },
