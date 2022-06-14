@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -37,10 +38,24 @@ const Footer = () => {
           <h6 className="fw-bold">Quick Links</h6>
 
           <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Make a Donation</li>
+            <Link href="/">
+              <li className="nav-item">Home</li>
+            </Link>
+            <Link href="/about">
+              <li className="nav-item">About Us</li>
+            </Link>
+            <Link href="/register">
+              <li className="nav-item">Become a Member</li>
+            </Link>
+            <Link href="/events">
+              <li className="nav-item">Our Events</li>
+            </Link>{" "}
+            <Link href="/contact">
+              <li className="nav-item">Contact Us</li>
+            </Link>
+            <Link href="/donate">
+              <li className="nav-item">Donate</li>
+            </Link>
           </ul>
         </div>
 
@@ -48,9 +63,11 @@ const Footer = () => {
           <h6 className="fw-bold">Connect With Us</h6>
 
           <ul>
-            <li>
-              <i className="fab fa-facebook-f"></i>
-            </li>
+            <Link href="https://web.facebook.com/groups/2617452395164992">
+              <li>
+                <i className="fab fa-facebook-f"></i>
+              </li>
+            </Link>
             <li>
               <i className="fab fa-instagram"></i>
             </li>

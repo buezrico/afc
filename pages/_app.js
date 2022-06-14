@@ -1,7 +1,6 @@
 import Layout from "../layout/Layout";
 import "../styles/globals.scss";
 import "../styles/index.scss";
-import "../styles/paystack.css";
 
 function MyApp({ Component, pageProps }) {
   return (

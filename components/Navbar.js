@@ -63,8 +63,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="close-btn" onClick={() => setShowMenu(!showMenu)}>
-          <i className="fas fa-times-circle"></i>
+        <div className="close-btn">
+          <i
+            className="fas fa-times-circle"
+            onClick={() => setShowMenu(!showMenu)}
+          ></i>
         </div>
       </div>
 

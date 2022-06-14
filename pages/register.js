@@ -2,19 +2,47 @@ import Head from "next/head";
 import React, { useState } from "react";
 import { PaystackButton } from "react-paystack";
 import PagesTop from "../components/PagesTop";
+import axios from "axios";
 
 const Register = () => {
   const publicKey = "pk_test_d70344584529bd104ad330d0c2b132138f20c1b7";
+
+  //Live Account
+  // const publicKey = "pk_live_c50f038ac6ef43a0e312c01981bfb938e3e933c9";
   const amount = 50000;
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-  console.log(name);
 
-  const register = () => {
-    e.preventDefault();
-  };
+  // const register = async (e) => {
+  //   e.preventDefault();
+
+  //   const newMember = {
+  //     name: name,
+  //     email: email,
+  //     phone: phone,
+  //   };
+  //   console.log(name);
+
+  //   // await axios.post("http://localhost:1337/api/members/", {
+  //   //   newMember,
+  //   // });
+
+  //   const response = await fetch("http://localhost:1337/api/members", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     // body: {
+  //     //   name: name,
+  //     //   email: email,
+  //     //   phone: phone,
+  //     // },
+  //   });
+
+  //   console.log(newMember);
+  // };
 
   const componentProps = {
     email,
@@ -28,9 +56,9 @@ const Register = () => {
     },
     publicKey,
     text: "Submit and Make Payment",
-    onSuccess: () =>
-      alert("Thanks for doing business with us! Come back soon!!"),
-    onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+    // onSuccess: () =>
+    //   alert("Thanks for doing business with us! Come back soon!!"),
+    // onClose: () => alert("Wait! You need this oil, don't go!!!!"),
   };
 
   return (
@@ -74,7 +102,10 @@ const Register = () => {
           </div>
 
           <div className="register-form">
-            <form className="form" onSubmit={register}>
+            <form
+              className="form"
+              // onSubmit={register}
+            >
               <h5 className="fw-bold text-secondary">
                 Kindly fill the form below with your correct details
               </h5>
@@ -126,6 +157,7 @@ const Register = () => {
                   organization.
                 </label>
               </div>
+              {/* <input type="submit" className="btn btn-secondary" /> */}
             </form>
 
             <PaystackButton

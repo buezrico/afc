@@ -41,7 +41,8 @@ const About = () => {
           <p>
             <span className="fw-bold">Awelga Female Connect</span> is a
             non-governmental and apolitical organization made up of female
-            youths from the Ahoada West Local Government Area.
+            youths from the Ahoada West Local Government Area, Rivers State,
+            Nigeria.
           </p>
           <p>It was founded in May 2021.</p>
 
@@ -216,19 +217,21 @@ const About = () => {
 
           <div className="about-coordinator-text">
             <p>
-              Uyi Eunice Simeon, from Odieke-Ugbobi Community in Ahoada West
-              Local Government Area , Rivers State .
+              Uyi Eunice Simeon, A female youth from Odieke-Ugobi Community in
+              Ahoada West Local Government Area , Rivers State, Nigeria.
             </p>
             <p>
-              A graduate of Rivers State University, faculty of Education where
-              she took Adult Education and Community Development as a discipline
-              in her first degree.
+              A Graduate of Adult Education and community development in the
+              Faculty of Education as her first degree in Rivers State
+              University.
             </p>
             <p>
-              She served as the former Special Assistant on Student Affairs to
-              Hon. (Evang) Hope O. Ikiriko, PhD, CNA, FNES . In the between 2018
-              - 2021 and currently the Deputy Chief of staff his return as the
-              Local Government Chairman in his 2nd tenure .
+              Uyi Eunice Simeon served as the former Special Assistant on
+              Student Affairs to Hon. (Evang) Hope O. Ikiriko, PhD, CNA, FNES
+              during his first tenure in the year 2018 - 2021.<br></br> Due to
+              her commitment to work, she was promoted to the office of the
+              Deputy Chief of Staff to Hon. (Evang) Hope O. Ikiriko, PhD, CNA,
+              FNES during his second tenure in the year 2021.
             </p>
           </div>
         </div>

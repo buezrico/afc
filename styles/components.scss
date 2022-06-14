@@ -1,5 +1,18 @@
 @import "./variable";
 
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+  }
+  33% {
+    border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
+  }
+  66% {
+    border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
+  }
+}
+
 .navbar {
   margin: 0;
   display: flex;
@@ -55,7 +68,9 @@
         position: fixed;
         top: 1%;
         right: 5%;
-        border-radius: 15px;
+        // border-radius: 15px;
+        border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+        animation: morph 3.75s linear infinite;
         height: 3rem;
         width: 3rem;
         z-index: 999;
@@ -72,7 +87,9 @@
           width: 85%;
           height: 80%;
           background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
-          border-radius: 15px;
+          // border-radius: 15px;
+          border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+          animation: morph 3.75s linear infinite;
 
           // opacity: 0.7;
 
@@ -157,22 +174,31 @@
     position: fixed;
     height: 100vh;
     width: 100%;
-    background-color: rgba(24, 96, 221, 0.9);
+    // background-color: rgba(24, 96, 221, 0.2);
 
     z-index: 3;
     top: 0;
     left: -100%;
     // left: 0;
     transition: all 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .first-wrapper {
-      border-radius: 100% 0% 100% 0% / 0% 45% 55% 100%;
+      background: linear-gradient(120deg, #176bfb -0.82%, #3ca455 100%);
+      border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+      animation: morph 8.75s linear infinite;
 
       height: 100%;
+      width: 100%;
 
       .second-wrapper {
-        border-radius: 100% 0% 100% 0% / 0% 1% 99% 100%;
-        height: 100%;
+        // border-radius: 100% 0% 100% 0% / 0% 1% 99% 100%;
+        // background-color: $dark;
+        // border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+        // animation: morph 3.75s linear infinite;
+        height: 90%;
         padding: 3rem;
         display: flex;
         justify-content: center;
@@ -333,6 +359,18 @@
 
     .links {
       width: 30%;
+
+      ul {
+        li {
+          cursor: pointer;
+          // transition: all 0.5s;
+
+          &:hover {
+            color: $secondary;
+            font-weight: bold;
+          }
+        }
+      }
     }
 
     .socials {
@@ -343,6 +381,15 @@
 
         li {
           margin-right: 1rem;
+          cursor: pointer;
+          transition: all 0.5s;
+          font-size: 1.2rem;
+
+          &:hover {
+            transform: scale(1.21);
+            color: $secondary;
+            font-weight: bold;
+          }
         }
       }
     }
@@ -396,10 +443,15 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1050px) {
+    .title {
+      padding: 3rem;
+      height: 40vh;
+    }
+  }
+  @media screen and (max-width: 512px) {
     .title {
       padding: 1.5rem;
-      height: 40vh;
     }
   }
 }

@@ -10,7 +10,6 @@ export default function Home() {
         <meta name="description" content="Awelga Female Connect Website" />
         <link rel="icon" href="/logo.ico" />
       </Head>
-
       <header>
         <div className="inner">
           <h1>
@@ -43,7 +42,6 @@ export default function Home() {
           </div>
         </Link>
       </header>
-
       <section className="who-we-are" id="who-we-are">
         <div className="inner ">
           <div className="about-content">
@@ -51,8 +49,8 @@ export default function Home() {
             <p>
               <span>Awelga Female Connect</span> is non-governmental and
               apolitical organization made up of female youth from the Ahoada
-              West Local Government which was founded in May 2021 by Uyi Eunice
-              Umashime.
+              West Local Government Area, Rivers State, Nigeria, which was
+              founded in May 2021 by Uyi Eunice Umashime.
             </p>
             <div className="objectives">
               <p>
@@ -88,7 +86,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="principles">
         <div className="inner">
           <div className="mission principle">
@@ -120,7 +117,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="impact">
         <div className="inner">
           <div className="impact-content">
@@ -182,7 +178,6 @@ export default function Home() {
           <div className="impact-pic"></div>
         </div>
       </section>
-
       <section className="member">
         <div className="inner">
           <div className="member-content">
@@ -220,9 +215,48 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section>{" "}
+      <section className="events">
+        <div className="inner">
+          <div className="event-content">
+            {/* <i className="fas fa-calendar-alt"></i> */}
+            <p className="">
+              One <span className="fw-bold text-success">MEETING</span> can
+              change it all.
+            </p>
+            <h2 className="fw-bold text-primary ">OUR EVENTS</h2>
+            <p>
+              We have more to do and welcome you to join us to achieve more.
+            </p>
+            <div className="bottom">
+              <Link href="/events">
+                <button className="btn btn-primary">View Events</button>
+              </Link>
+              <div className="bottom-img">
+                <Image
+                  src="/imgs/event.svg"
+                  width="100%"
+                  height="100%"
+                  alt="become-a-meber"
+                  unoptimized
+                  className="img"
+                />
+              </div>
+            </div>
+          </div>
 
-      <section className="event-gallery">
+          <div className="event-pic">
+            <Image
+              src="/imgs/event.svg"
+              width={300}
+              height={300}
+              alt="become-a-meber"
+              unoptimized
+            />
+          </div>
+        </div>
+      </section>
+      {/* <section className="events">
         <div className="inner">
           <div className="content">
             <i className="fas fa-calendar-alt"></i>
@@ -235,6 +269,17 @@ export default function Home() {
               <button className="btn btn-primary">View Events</button>
             </Link>
           </div>
+
+          <div className="member-pic">
+            <Image
+              src="/imgs/member.svg"
+              width={300}
+              height={300}
+              alt="become-a-meber"
+              unoptimized
+            />
+          </div>
+
           <hr />
           <div className="content">
             <i className="fas fa-images"></i>
@@ -248,7 +293,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
