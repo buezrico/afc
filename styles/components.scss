@@ -70,7 +70,7 @@
         right: 5%;
         // border-radius: 15px;
         border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-        animation: morph 3.75s linear infinite;
+        animation: morph 3s linear infinite;
         height: 3rem;
         width: 3rem;
         z-index: 999;
@@ -87,11 +87,8 @@
           width: 85%;
           height: 80%;
           background: linear-gradient(180deg, #176bfb -0.82%, #3ca455 100%);
-          // border-radius: 15px;
           border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-          animation: morph 3.75s linear infinite;
-
-          // opacity: 0.7;
+          animation: morph 3s linear infinite;
 
           box-sizing: border-box;
           align-items: center;
@@ -174,12 +171,10 @@
     position: fixed;
     height: 100vh;
     width: 100%;
-    // background-color: rgba(24, 96, 221, 0.2);
 
     z-index: 3;
     top: 0;
     left: -100%;
-    // left: 0;
     transition: all 1s ease-in-out;
     display: flex;
     justify-content: center;
@@ -188,7 +183,7 @@
     .first-wrapper {
       background: linear-gradient(120deg, #176bfb -0.82%, #3ca455 100%);
       border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-      animation: morph 8.75s linear infinite;
+      animation: morph 4s linear infinite;
 
       height: 100%;
       width: 100%;
@@ -425,7 +420,6 @@
 
 .page-top {
   .title {
-    height: 60vh;
     padding: 5rem;
     border-bottom: 2px solid $primary;
     border-top: 2px solid $primary;
@@ -436,7 +430,6 @@
 
     .title-text {
       padding-top: 5rem;
-      // background-color: #fff;
       h1 {
         font-weight: 900;
       }
@@ -446,12 +439,12 @@
   @media screen and (max-width: 1050px) {
     .title {
       padding: 3rem;
-      height: 40vh;
+      // height: 40vh;
     }
   }
   @media screen and (max-width: 512px) {
     .title {
-      padding: 1.5rem;
+      padding: 3rem 1.5rem;
     }
   }
 }

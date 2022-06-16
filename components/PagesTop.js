@@ -6,7 +6,7 @@ const PagesTop = (props) => {
       <div
         className="title "
         style={{
-          background: `url("${props.bg}"), rgba(6, 4, 29, 0.8)`,
+          background: `url("${props.bg}"), rgba(6, 4, 29, 0.7)`,
           backgroundAttachment: "fixed",
           backgroundSize: "center",
           backgroundBlendMode: "multiply",

@@ -8,9 +8,8 @@
 
 header {
   min-height: 100vh;
-  // min-height: calc(100vh - 4rem);
   width: 100%;
-  background: url("../public/imgs/headerbg.png"), rgba(5, 2, 32, 0.8);
+  background: url("../public/imgs/headerbg.png"), rgba(5, 2, 32, 0.7);
   background-position: center;
   background-blend-mode: multiply;
   background-size: cover;
@@ -99,25 +98,6 @@ header {
     justify-content: space-between;
     padding: 5rem;
 
-    // .about-pic {
-    //   width: 50%;
-    //   height: 100%;
-
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   position: relative;
-
-    //   .img-bg {
-    //     position: absolute;
-    //     background-color: $secondary;
-    //     width: 60%;
-    //     top: -5%;
-    //     bottom: -5%;
-    //     left: 0;
-    //   }
-    // }
-
     .about-content {
       line-height: 1.8rem;
       width: 60%;
@@ -158,7 +138,6 @@ header {
 
 .principles {
   background: url("../public/imgs/principlebg.png"), rgba(12, 11, 66, 0.95);
-  // height: 60vh;
   background-position: center;
   background-blend-mode: multiply;
   background-size: cover;
@@ -170,8 +149,6 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4rem;
-    // place-items: start center;
-    // padding: 0 2rem;
 
     .principle {
       text-align: center;
@@ -307,20 +284,16 @@ header {
   }
 }
 .events {
-  // background: url("../public/imgs/eventsbg.png"), rgba(12, 11, 66, 0.99);
-  // background-color: $dark;
   background-position: center;
   background-blend-mode: multiply;
   background-size: cover;
-  padding: 1rem 5rem;
+  padding: 2rem;
 
   .inner {
-    // color: $light;
     border-top: 2px solid $primary;
     border-bottom: 2px solid $primary;
     border-radius: 25px;
     display: flex;
-    // flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
@@ -328,14 +301,11 @@ header {
     .event-content {
       display: flex;
       flex-direction: column;
-      // align-items: flex-end;
 
       .bottom {
         display: flex;
-        // flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
         .btn {
           font-size: 0.9rem;
           padding: 0.8rem 3rem;
@@ -348,43 +318,6 @@ header {
     }
   }
 }
-
-// .events {
-//   display: flex;
-//   align-items: center;
-
-//   .inner {
-//     height: 100%;
-//     width: 100%;
-//     background-color: $light;
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-evenly;
-//     padding: 5rem;
-
-//     .content {
-//       // width: 40%;
-//       text-align: center;
-//       transition: all 0.5s;
-//       cursor: pointer;
-
-//       i {
-//         font-size: 2rem;
-//         color: $secondary;
-//         margin-bottom: 1rem;
-//       }
-
-//       &:hover {
-//         transform: scale(1.1);
-//       }
-//     }
-//     hr {
-//       transform: rotate(90deg);
-//       width: 10rem;
-//       background-color: $mute;
-//     }
-//   }
-// }
 
 @media screen and (max-width: 1050px) {
   header {
@@ -442,8 +375,7 @@ header {
     }
   }
 
-  .member,
-  .events {
+  .member {
     padding: 3rem;
   }
 }
@@ -530,28 +462,10 @@ header {
     .inner {
       .event-content {
         .bottom {
-          // display: flex;
-          // flex-direction: row-reverse;
-          // justify-content: space-between;
           .bottom-img {
             display: flex;
           }
         }
-      }
-    }
-  }
-
-  .event-gallery {
-    .inner {
-      flex-direction: column;
-      padding: 3rem;
-
-      hr {
-        display: none;
-      }
-      .content {
-        width: 100%;
-        padding: 1rem;
       }
     }
   }
@@ -618,21 +532,6 @@ header {
     padding: 3rem 1.5rem;
     .member-pic {
       display: none;
-    }
-  }
-
-  .event-gallery {
-    .inner {
-      flex-direction: column;
-      padding: 3rem 1.5rem;
-
-      hr {
-        display: none;
-      }
-      .content {
-        width: 100%;
-        padding: 1rem;
-      }
     }
   }
 }

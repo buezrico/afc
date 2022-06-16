@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import PagesTop from "../components/PagesTop";
 
 const Events = ({ events }) => {
@@ -19,10 +19,11 @@ const Events = ({ events }) => {
         about="Stay Updated"
       />
 
-      {/* <div className="inner">
+      <div className="inner">
         <div className="upcoming-events ">
           <h4 className="title fw-bold">UPCOMING EVENTS</h4>
-          {events.data.length <= 0 ? (
+          <h6 className="">There are currently no upcoming events.</h6>
+          {/* {events.data.length <= 0 ? (
             <h6 className="text-light">
               There are currently no upcoming events.
             </h6>
@@ -83,18 +84,19 @@ const Events = ({ events }) => {
                   );
                 })}
             </div>
-          )}
+          )} */}
         </div>
 
-        <div
+        {/* <div
           className={
             showPastEvents ? "d-none" : "d-flex justify-content-center"
           }
           onClick={() => setShowPastEvents(true)}
         >
           <button className="btn btn-primary">View Past Events</button>
-        </div>
-        <div className={showPastEvents ? "d-block" : "d-none"}>
+        </div> */}
+
+        {/* <div className={showPastEvents ? "d-block" : "d-none"}>
           <h4 className="title fw-bold">PAST EVENTS</h4>
 
           <div className="events">
@@ -155,8 +157,8 @@ const Events = ({ events }) => {
                 );
               })}
           </div>
-        </div>
-      </div> */}
+        </div> */}
+      </div>
     </div>
   );
 };

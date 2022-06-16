@@ -5,11 +5,11 @@ import PagesTop from "../components/PagesTop";
 import axios from "axios";
 
 const Register = () => {
-  const publicKey = "pk_test_d70344584529bd104ad330d0c2b132138f20c1b7";
+  // const publicKey = "pk_test_d70344584529bd104ad330d0c2b132138f20c1b7";
 
   //Live Account
-  // const publicKey = "pk_live_c50f038ac6ef43a0e312c01981bfb938e3e933c9";
-  const amount = 50000;
+  const publicKey = "pk_live_c50f038ac6ef43a0e312c01981bfb938e3e933c9";
+  const amount = 500;
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -141,7 +141,7 @@ const Register = () => {
                 />
                 <input type="text" placeholder="State of Origin" />
                 <input type="text" placeholder="LGA" />
-                <input type="text" placeholder="Ward " />
+                <input type="text" placeholder="Ward" />
                 <input type="text" placeholder="Name of referee (optional)" />
                 <select name="" id="">
                   <option value="">Educational Qualification </option>
