@@ -25,18 +25,20 @@ const Contact = () => {
           <div className="contact-message">
             <h4 className="title fw-bold">Get In Touch</h4>
 
-            <form>
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Email" />
+            <form name="contact" method="POST" netlify data-netlify="true">
+              <input type="text" name="name" placeholder="Name" />
+              <input type="text" name="email" placeholder="Email" />
               <textarea
-                name=""
+                name="message"
                 id=""
                 cols="30"
                 rows="3"
                 placeholder="Your Message"
                 // maxLength="1024"
               ></textarea>
-              <button className="btn btn-secondary">Send Message</button>
+              <button className="btn btn-secondary" type="submit">
+                Send Message
+              </button>
             </form>
           </div>
           <div className="contact-address">
