@@ -35,12 +35,24 @@
     justify-content: space-between;
     padding: 0 5rem;
     width: 100%;
-    height: 4rem;
+    height: 5rem;
+    background-color: $light;
 
     .navbar-brand {
-      width: 5rem;
-      padding: 0;
+      width: 4rem;
       cursor: pointer;
+      background: $light;
+
+      .img {
+        border-radius: 15px;
+        background: $light;
+        box-shadow: -5px -5px 15px #919193, 5px 5px 15px #ffffff;
+        padding: 0.3rem;
+
+        &:hover {
+          background-color: rgb(255, 255, 255);
+        }
+      }
     }
 
     ul {
@@ -66,7 +78,7 @@
       display: none;
       .menu-btn {
         position: fixed;
-        top: 1%;
+        top: 2%;
         right: 5%;
         // border-radius: 15px;
         border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;

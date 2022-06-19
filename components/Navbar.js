@@ -74,14 +74,16 @@ const Navbar = () => {
       <div className="inner">
         <Link href="/">
           <div className="navbar-brand">
-            <Image
-              src="/imgs/afclogo.png"
-              width="100%"
-              height="100%"
-              layout="responsive"
-              unoptimized
-              alt="brand-logo"
-            />
+            <div className="img">
+              <Image
+                src="/imgs/afclogo.png"
+                width={50}
+                height={50}
+                layout="responsive"
+                // unoptimized
+                alt="brand-logo"
+              />
+            </div>
           </div>
         </Link>
 
