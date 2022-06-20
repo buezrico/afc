@@ -135,7 +135,7 @@ const Register = () => {
                   organization.
                 </label>
               </div>
-              <input type="submit" className="d-none" />
+              <input type="submit" className="d-none" ref={submitForm} />
             </form>
             <PaystackButton
               className="btn btn-primary w-100"
