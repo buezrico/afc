@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { PaystackButton } from "react-paystack";
 import PagesTop from "../components/PagesTop";
 import axios from "axios";
@@ -15,35 +15,11 @@ const Register = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
 
-  const register = async (e) => {
-    e.preventDefault();
+  const submitForm = useRef(null);
+
+  const register = () => {
+    submitForm.current.click();
   };
-
-  //   const newMember = {
-  //     name: name,
-  //     email: email,
-  //     phone: phone,
-  //   };
-  //   console.log(name);
-
-  //   // await axios.post("http://localhost:1337/api/members/", {
-  //   //   newMember,
-  //   // });
-
-  //   const response = await fetch("http://localhost:1337/api/members", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     // body: {
-  //     //   name: name,
-  //     //   email: email,
-  //     //   phone: phone,
-  //     // },
-  //   });
-
-  //   console.log(newMember);
-  // };
 
   const componentProps = {
     email,
@@ -57,9 +33,10 @@ const Register = () => {
     },
     publicKey,
     text: "Submit and Make Payment",
-    // onSuccess: () =>
-    //   alert("Thanks for doing business with us! Come back soon!!"),
-    // onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+    onSuccess: () => {
+      register();
+    },
+    onClose: () => alert("Wait! You need this oil, don't go!!!!"),
   };
 
   return (
@@ -103,13 +80,8 @@ const Register = () => {
           </div>
 
           <div className="register-form">
-            <form
-              name="Members"
-              onSubmit={register}
-              method="POST"
-              data-netlify="true"
-            >
-              <input type="hidden" name="form-name" value="cMembers" />
+            <form name="Members" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="Members" />
               <h5 className="fw-bold text-secondary">
                 Kindly fill the form below with your correct details
               </h5>
@@ -163,12 +135,12 @@ const Register = () => {
                   organization.
                 </label>
               </div>
-              {/* <input type="submit" className="btn btn-secondary" /> */}
-              <PaystackButton
-                className="btn btn-primary w-100"
-                {...componentProps}
-              />
+              <input type="submit" className="d-none" />
             </form>
+            <PaystackButton
+              className="btn btn-primary w-100"
+              {...componentProps}
+            />
           </div>
         </div>
       </div>
