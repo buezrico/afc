@@ -102,10 +102,8 @@ const Register = () => {
           </div>
 
           <div className="register-form">
-            <form
-              className="form"
-              // onSubmit={register}
-            >
+            <form name="Members" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="cMembers" />
               <h5 className="fw-bold text-secondary">
                 Kindly fill the form below with your correct details
               </h5>
@@ -158,12 +156,11 @@ const Register = () => {
                 </label>
               </div>
               {/* <input type="submit" className="btn btn-secondary" /> */}
+              <PaystackButton
+                className="btn btn-primary w-100"
+                {...componentProps}
+              />
             </form>
-
-            <PaystackButton
-              className="btn btn-primary w-100"
-              {...componentProps}
-            />
           </div>
         </div>
       </div>
