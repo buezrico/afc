@@ -15,8 +15,9 @@ const Register = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
 
-  // const register = async (e) => {
-  //   e.preventDefault();
+  const register = async (e) => {
+    e.preventDefault();
+  };
 
   //   const newMember = {
   //     name: name,
@@ -102,7 +103,12 @@ const Register = () => {
           </div>
 
           <div className="register-form">
-            <form name="Members" method="POST" data-netlify="true">
+            <form
+              name="Members"
+              onSubmit={register}
+              method="POST"
+              data-netlify="true"
+            >
               <input type="hidden" name="form-name" value="cMembers" />
               <h5 className="fw-bold text-secondary">
                 Kindly fill the form below with your correct details
