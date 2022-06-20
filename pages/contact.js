@@ -2,6 +2,8 @@ import Head from "next/head";
 import React from "react";
 import PagesTop from "../components/PagesTop";
 
+import { NetlifyForm, Honeypot } from "react-netlify-forms";
+
 const Contact = () => {
   return (
     <div className="contact">
@@ -32,21 +34,48 @@ const Contact = () => {
           <div className="contact-message">
             <h4 className="title fw-bold">Get In Touch</h4>
 
-            <form name="contact" method="POST" netlify data-netlify="true">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="text" name="email" placeholder="Email" />
-              <textarea
-                name="message"
-                id=""
-                cols="30"
-                rows="3"
-                placeholder="Your Message"
-                // maxLength="1024"
-              ></textarea>
-              <button className="btn btn-secondary" type="submit">
-                Send Message
-              </button>
-            </form>
+            <NetlifyForm
+              name="Contact"
+              action="/thanks"
+              honeypotName="bot-field"
+            >
+              {({ handleChange, success, error }) => (
+                <>
+                  <Honeypot />
+                  {success && <p>Thanks for contacting us!</p>}
+                  {error && (
+                    <p>
+                      Sorry, we could not reach our servers. Please try again
+                      later.
+                    </p>
+                  )}
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    onChange={handleChange}
+                  />
+                  <input
+                    type="text"
+                    name="email"
+                    placeholder="Email"
+                    onChange={handleChange}
+                  />
+                  <textarea
+                    name="message"
+                    id=""
+                    cols="30"
+                    rows="3"
+                    placeholder="Your Message"
+                    onChange={handleChange}
+                    // maxLength="1024"
+                  ></textarea>
+                  <button className="btn btn-secondary" type="submit">
+                    Send Message
+                  </button>
+                </>
+              )}
+            </NetlifyForm>
           </div>
           <div className="contact-address">
             <h4 className="title fw-bold">Contact Us</h4>
