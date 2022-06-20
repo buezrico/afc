@@ -5,10 +5,10 @@ import PagesTop from "../components/PagesTop";
 import axios from "axios";
 
 const Register = () => {
-  // const publicKey = "pk_test_d70344584529bd104ad330d0c2b132138f20c1b7";
+  const publicKey = "pk_test_d70344584529bd104ad330d0c2b132138f20c1b7";
 
   //Live Account
-  const publicKey = "pk_live_c50f038ac6ef43a0e312c01981bfb938e3e933c9";
+  // const publicKey = "pk_live_c50f038ac6ef43a0e312c01981bfb938e3e933c9";
   const amount = 500;
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -110,6 +110,7 @@ const Register = () => {
               <div className="custom-form-group">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Full Name"
                   id="name"
                   onChange={(e) => setName(e.target.value)}
@@ -117,6 +118,7 @@ const Register = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   placeholder="Email Address"
                   onChange={(e) => setEmail(e.target.value)}
                 />
