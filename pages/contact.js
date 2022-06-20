@@ -35,14 +35,15 @@ const Contact = () => {
             <form name="contact" method="POST" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
 
-              <input type="text" name="name" placeholder="Name" />
-              <input type="text" name="email" placeholder="Email" />
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="text" name="email" placeholder="Email" required />
               <textarea
                 name="message"
                 id=""
                 cols="30"
                 rows="3"
                 placeholder="Your Message"
+                required
                 // maxLength="1024"
               ></textarea>
               <button className="btn btn-secondary" type="submit">
