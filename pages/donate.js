@@ -5,10 +5,10 @@ import { PaystackButton } from "react-paystack";
 import PagesTop from "../components/PagesTop";
 
 const Donate = () => {
-  const publicKey = "pk_test_d70344584529bd104ad330d0c2b132138f20c1b7";
+  // const publicKey = "pk_test_d70344584529bd104ad330d0c2b132138f20c1b7";
 
   //Live Account
-  // const publicKey = "pk_live_c50f038ac6ef43a0e312c01981bfb938e3e933c9";
+  const publicKey = "pk_live_c50f038ac6ef43a0e312c01981bfb938e3e933c9";
   const [email, setEmail] = useState("");
   const [amount, setAmount] = useState("");
   const [name, setName] = useState("");
