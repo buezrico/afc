@@ -174,7 +174,7 @@ const Register = () => {
                   <label htmlFor="ward">Ward</label>
                   <input
                     type="text"
-                    placeholder="Ward"
+                    placeholder="Ward (optional)"
                     name="ward"
                     onChange={(e) => setWard(e.target.value)}
                   />
