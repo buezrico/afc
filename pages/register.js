@@ -9,7 +9,7 @@ const Register = () => {
 
   //Live Account
   const publicKey = "pk_live_c50f038ac6ef43a0e312c01981bfb938e3e933c9";
-  const amount = 500;
+  const amount = 50000;
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -124,6 +124,8 @@ const Register = () => {
                     placeholder="Phone Number"
                     onChange={(e) => setPhone(e.target.value)}
                     required
+                    maxLength="11"
+                    minLength="11"
                   />
                 </div>
                 <div className="form-group">
@@ -234,7 +236,6 @@ const Register = () => {
                 !address ||
                 !SOR ||
                 !LGA ||
-                !ward ||
                 !EQ ||
                 !occupation ||
                 !terms
@@ -249,7 +250,6 @@ const Register = () => {
                 !address ||
                 !SOR ||
                 !LGA ||
-                !ward ||
                 !referee ||
                 !EQ ||
                 !occupation ||

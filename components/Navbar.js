@@ -44,13 +44,17 @@ const Navbar = () => {
                 <li onClick={() => setShowMenu(!showMenu)} className="nav-item">
                   Our Events
                 </li>
+              </Link>{" "}
+              <Link href="/gallery">
+                <li onClick={() => setShowMenu(!showMenu)} className="nav-item">
+                  Our Gallery
+                </li>
               </Link>
               <Link href="/contact">
                 <li onClick={() => setShowMenu(!showMenu)} className="nav-item">
                   Contact Us
                 </li>
               </Link>
-
               <Link href="/donate">
                 <div
                   className="donate-btn"
@@ -95,11 +99,14 @@ const Navbar = () => {
             <li className="nav-item">About Us</li>
           </Link>
           <Link href="/register">
-            <li className="nav-item">Become a Member</li>
+            <li className="nav-item">Register</li>
           </Link>
           <Link href="/events">
-            <li className="nav-item">Our Events</li>
-          </Link>{" "}
+            <li className="nav-item">Events</li>
+          </Link>
+          <Link href="/gallery">
+            <li className="nav-item">Gallery</li>
+          </Link>
           <Link href="/contact">
             <li className="nav-item">Contact Us</li>
           </Link>

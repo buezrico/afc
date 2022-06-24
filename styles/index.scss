@@ -5,6 +5,7 @@
 @import "./donation.scss";
 @import "./register.scss";
 @import "./events.scss";
+@import "./gallery.scss";
 @import "./success.scss";
 
 header {
@@ -284,37 +285,73 @@ header {
     }
   }
 }
-.events {
-  background-position: center;
-  background-blend-mode: multiply;
-  background-size: cover;
-  padding: 2rem;
+// .events {
+//   background-position: center;
+//   background-blend-mode: multiply;
+//   background-size: cover;
+//   padding: 2rem;
+
+//   .inner {
+//     border-top: 2px solid $primary;
+//     border-bottom: 2px solid $primary;
+//     border-radius: 25px;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     padding: 1rem;
+
+//     .event-content {
+//       display: flex;
+//       flex-direction: column;
+
+//       .bottom {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         .btn {
+//           font-size: 0.9rem;
+//           padding: 0.8rem 3rem;
+//         }
+//         .bottom-img {
+//           display: none;
+//           padding: 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.event-gallery {
+  display: flex;
+  align-items: center;
 
   .inner {
-    border-top: 2px solid $primary;
-    border-bottom: 2px solid $primary;
-    border-radius: 25px;
+    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 1rem;
+    justify-content: space-between;
+    padding: 5rem;
 
-    .event-content {
-      display: flex;
-      flex-direction: column;
+    .content {
+      width: 45%;
+      text-align: center;
+      transition: all 0.5s;
+      border-top: 2px solid $primary;
+      // border-right: 2px solid $primary;
+      border-bottom: 2px solid $primary;
+      padding: 1rem;
+      border-radius: 25px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
 
-      .bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .btn {
-          font-size: 0.9rem;
-          padding: 0.8rem 3rem;
-        }
-        .bottom-img {
-          display: none;
-          padding: 0;
-        }
+      // &:nth-child(2) {
+      //   border-right: none;
+      //   border-left: 2px solid $primary;
+      // }
+
+      button {
+        width: 100%;
       }
     }
   }
@@ -332,7 +369,6 @@ header {
   .who-we-are {
     .inner {
       padding: 0 3rem;
-      // height: 80%;
 
       .about-pic {
         display: none;
@@ -454,18 +490,31 @@ header {
       }
     }
   }
-  .events {
-    .event-pic {
-      display: none;
-    }
+  // .events {
+  //   .event-pic {
+  //     display: none;
+  //   }
 
+  //   .inner {
+  //     .event-content {
+  //       .bottom {
+  //         .bottom-img {
+  //           display: flex;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  .event-gallery {
     .inner {
-      .event-content {
-        .bottom {
-          .bottom-img {
-            display: flex;
-          }
-        }
+      flex-direction: column;
+      padding: 3rem;
+
+      .content {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -532,6 +581,16 @@ header {
     padding: 3rem 1.5rem;
     .member-pic {
       display: none;
+    }
+  }
+
+  .event-gallery {
+    .inner {
+      padding: 3rem 1.5rem;
+
+      .content {
+        padding: 0.5rem;
+      }
     }
   }
 }

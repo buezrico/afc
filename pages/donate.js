@@ -62,8 +62,8 @@ const Donate = () => {
           <div className="donation-form">
             <h4 className="title fw-bold">Make a Donation Today!</h4>
 
-            <form name="Doantion" method="POST" data-netlify="true">
-              <input type="hidden" name="form-name" value="Doantion" />
+            <form name="Donation" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="Donation" />
               <input
                 type="text"
                 placeholder="Full Name"
