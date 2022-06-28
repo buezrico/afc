@@ -12,6 +12,13 @@ const Contact = () => {
           content="Get in touch with Awelga Female Connect"
         />
         <link rel="icon" href="/logo.ico" />
+
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <PagesTop
@@ -25,15 +32,18 @@ const Contact = () => {
           <div className="contact-message">
             <h4 className="title fw-bold">Get In Touch</h4>
 
-            <form name="contact" method="POST" netlify data-netlify="true">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="text" name="email" placeholder="Email" />
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
+
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="text" name="email" placeholder="Email" required />
               <textarea
                 name="message"
                 id=""
                 cols="30"
                 rows="3"
                 placeholder="Your Message"
+                required
                 // maxLength="1024"
               ></textarea>
               <button className="btn btn-secondary" type="submit">

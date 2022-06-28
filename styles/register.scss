@@ -17,6 +17,17 @@
           padding: 0.5rem;
         }
 
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          
+          margin: 0;
+        }
+
+        label {
+          padding: 0.3rem 0;
+        }
+
         .custom-form-group {
           margin-top: 2rem;
           display: grid;
@@ -35,6 +46,7 @@
           input {
             width: unset;
             margin-right: 0.5rem;
+            cursor: pointer;
           }
         }
       }

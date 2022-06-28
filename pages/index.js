@@ -216,10 +216,9 @@ export default function Home() {
           </div>
         </div>
       </section>{" "}
-      <section className="events">
+      {/* <section className="events">
         <div className="inner">
           <div className="event-content">
-            {/* <i className="fas fa-calendar-alt"></i> */}
             <p className="">
               One <span className="fw-bold text-success">MEETING</span> can
               change it all.
@@ -255,45 +254,51 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
-      {/* <section className="events">
+      </section> */}
+      <section className="event-gallery">
         <div className="inner">
           <div className="content">
-            <i className="fas fa-calendar-alt"></i>
-            <h6 className="fw-bold text-secondary">OUR EVENTS</h6>
+            <div className="member-pic">
+              <Image
+                src="/imgs/event.svg"
+                width={100}
+                height={100}
+                alt="become-a-meber"
+                unoptimized
+              />
+            </div>
+            <h5 className="fw-bold text-primary">OUR EVENTS</h5>
             <p>
               Every year we have series of events scheduled to hold at different
-              times of the year.{" "}
+              times of the year.
+              {/* One meeting can change it all. */}
             </p>
             <Link href="/events">
               <button className="btn btn-primary">View Events</button>
             </Link>
           </div>
 
-          <div className="member-pic">
+          {/* <hr /> */}
+
+          <div className="content">
             <Image
-              src="/imgs/member.svg"
-              width={300}
-              height={300}
+              src="/imgs/gallery.svg"
+              width={100}
+              height={100}
               alt="become-a-meber"
               unoptimized
             />
-          </div>
-
-          <hr />
-          <div className="content">
-            <i className="fas fa-images"></i>
-            <h6 className="fw-bold text-secondary">OUR GALLERY</h6>
+            <h5 className="fw-bold text-primary">OUR GALLERY</h5>
             <p>
-              All our events are captured for all the right reasons. Visit our
-              Media Gallery to see highlights of all events.
+              All our events are captured. Visit our Media Gallery to see
+              highlights of all events.
             </p>
             <Link href="/gallery">
               <button className="btn btn-primary">View Gallery</button>
             </Link>
           </div>
         </div>
-      </section> */}
+      </section>
     </div>
   );
 }

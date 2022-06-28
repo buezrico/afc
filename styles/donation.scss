@@ -38,23 +38,14 @@
           }
         }
       }
-      .bank-details {
+      .donate-pic {
         width: 40%;
 
-        .top {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
+        p {
+          margin: 0;
         }
-
-        .account-details {
-          .account-detail {
-            margin-bottom: 2rem;
-            p {
-              margin: 0;
-              margin-bottom: 0.3rem;
-            }
-          }
+        h4 {
+          margin-bottom: 1rem;
         }
       }
     }
@@ -68,7 +59,7 @@
         .donation-form {
           width: 60%;
         }
-        .bank-details {
+        .donate-pic {
           width: 30%;
         }
       }
@@ -81,14 +72,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
 
         .donation-form {
           width: 100%;
           padding: 2rem;
           margin-bottom: 2rem;
         }
-        .bank-details {
+        .donate-pic {
           width: 100%;
           padding: 1rem;
         }

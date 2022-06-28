@@ -44,13 +44,17 @@ const Navbar = () => {
                 <li onClick={() => setShowMenu(!showMenu)} className="nav-item">
                   Our Events
                 </li>
+              </Link>{" "}
+              <Link href="/gallery">
+                <li onClick={() => setShowMenu(!showMenu)} className="nav-item">
+                  Our Gallery
+                </li>
               </Link>
               <Link href="/contact">
                 <li onClick={() => setShowMenu(!showMenu)} className="nav-item">
                   Contact Us
                 </li>
               </Link>
-
               <Link href="/donate">
                 <div
                   className="donate-btn"
@@ -74,14 +78,16 @@ const Navbar = () => {
       <div className="inner">
         <Link href="/">
           <div className="navbar-brand">
-            <Image
-              src="/imgs/afclogo.png"
-              width="100%"
-              height="100%"
-              layout="responsive"
-              unoptimized
-              alt="brand-logo"
-            />
+            <div className="img">
+              <Image
+                src="/imgs/afclogo.png"
+                width={50}
+                height={50}
+                layout="responsive"
+                // unoptimized
+                alt="brand-logo"
+              />
+            </div>
           </div>
         </Link>
 
@@ -93,11 +99,14 @@ const Navbar = () => {
             <li className="nav-item">About Us</li>
           </Link>
           <Link href="/register">
-            <li className="nav-item">Become a Member</li>
+            <li className="nav-item">Register</li>
           </Link>
           <Link href="/events">
-            <li className="nav-item">Our Events</li>
-          </Link>{" "}
+            <li className="nav-item">Events</li>
+          </Link>
+          <Link href="/gallery">
+            <li className="nav-item">Gallery</li>
+          </Link>
           <Link href="/contact">
             <li className="nav-item">Contact Us</li>
           </Link>
