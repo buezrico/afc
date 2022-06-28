@@ -1,145 +1,68 @@
 @import "./variable";
 
 .gallery {
-  background: $light;
   height: 100vh;
-  width: 100%;
-  position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 999;
-  padding: 5rem 0 0 0;
+  padding-top: 6rem;
+  padding-bottom: 1rem;
 
-  display: flex;
-  justify-content: center;
-  //   align-items: flex-end;
-  .inner {
+  .image-gallery {
     height: 100%;
-    width: 100%;
-    // background-color: #000;
-    h6 {
-      margin-bottom: 2rem;
-      text-transform: uppercase;
-    }
-    .gallery-wrapper {
+
+    .image-gallery-content {
       height: 100%;
       display: flex;
-      justify-content: space-between;
-      padding-right: 0.5rem;
+      flex-direction: column;
+      justify-content: space-around;
 
-      .view-box {
-        background-color: #000;
-        width: 70%;
-        height: 100%;
-      }
-
-      .imgs-box {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-        overflow-y: scroll;
-        padding: 1rem;
-
-        &::-webkit-scrollbar {
-          margin-top: 1rem;
-          height: 0.7rem;
-        }
-
-        &::-webkit-scrollbar-track {
-          border-radius: 2rem;
-          background-color: $light;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          border: 3px solid $light;
-          background: $secondary;
-          border-radius: 5rem;
-        }
-
-        .gallery-img {
-          transition: all 350ms ease;
-          cursor: pointer;
-          margin-bottom: 0.5rem;
-          height: 5rem;
-          width: 6rem;
-
-          img {
-            border-radius: 20px;
-            width: 100%;
-            height: 100%;
-          }
-
-          &:hover {
-            filter: opacity(0.8);
-          }
-        }
-      }
-    }
-    @media screen and (max-width: 1050px) {
-      .gallery-wrapper {
-        .view-box {
-          width: 60%;
-          height: 100%;
-        }
-
-        .imgs-box {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-gap: 10px;
-          overflow-y: scroll;
-          padding: 1rem;
-
-          .gallery-img {
-            transition: all 350ms ease;
-            cursor: pointer;
-            margin-bottom: 0.5rem;
-            height: 4rem;
-            width: 5rem;
-
-            &:hover {
-              filter: opacity(0.8);
+      .image-gallery-slide-wrapper {
+        .image-gallery-swipe {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .image-gallery-slides {
+            .image-gallery-slide {
+              height: 25rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                height: 100%;
+              }
             }
           }
         }
       }
-    }
-    @media screen and (max-width: 768px) {
-      .gallery-wrapper {
-        flex-direction: column;
-        padding-right: 0;
 
-        padding-bottom: 0.5rem;
+      .image-gallery-thumbnails-wrapper {
+        .image-gallery-thumbnails {
+          padding: 0.5rem;
+          .image-gallery-thumbnails-container {
+            border-radius: 10px;
+            .image-gallery-thumbnail {
+              border-radius: 10px;
 
-        .view-box {
-          width: 100%;
-          height: 80%;
-        }
+              .image-gallery-thumbnail-inner {
+                border-radius: 10px;
+                height: 4rem;
+                img {
+                  border-radius: 10px;
+                  height: 100%;
+                  opacity: 0.8;
+                }
+              }
+            }
+            .image-gallery-thumbnail.active,
+            .image-gallery-thumbnail:focus,
+            .image-gallery-thumbnail:hover {
+              border: 2px solid $primary;
 
-        .imgs-box {
-          display: flex;
-          flex-wrap: nowrap;
-
-          //   grid-template-columns: repeat(3, 1fr);
-          //   grid-gap: 10px;
-          overflow-x: scroll;
-          overflow-y: hidden;
-          width: 100%;
-          padding: 1rem;
-
-          .gallery-img {
-            transition: all 350ms ease;
-            cursor: pointer;
-            height: 5rem;
-            min-width: 6rem;
+              .image-gallery-thumbnail-inner {
+                img {
+                  opacity: 1;
+                }
+              }
+            }
           }
-        }
-      }
-    }
-    @media screen and (max-width: 512px) {
-      //   padding: 1rem;
-
-      .gallery-wrapper {
-        .gallery-img {
         }
       }
     }
