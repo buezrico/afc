@@ -84,7 +84,7 @@ const Navbar = () => {
                 width={50}
                 height={50}
                 layout="responsive"
-                // unoptimized
+                unoptimized
                 alt="brand-logo"
               />
             </div>
