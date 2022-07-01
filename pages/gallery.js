@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React, { lazy } from "react";
 import ImageGallery from "react-image-gallery";
+import PagesTop from "../components/PagesTop";
 
 const URL = process.env.STRAPIBASEURL;
 
@@ -23,7 +24,15 @@ const MyGallery = ({ images }) => {
         <link rel="icon" href="/logo.ico" />
       </Head>
 
-      <ImageGallery items={mappedImages[0]} loading={lazy} infinite={false} />
+      <PagesTop
+        bg="/imgs/aboutbg.png"
+        title="Our Gallery"
+        about="We create amazing memories through pictures.."
+      />
+
+      <div className="inner">
+        <ImageGallery items={mappedImages[0]} infinite={false} />
+      </div>
     </div>
   );
 };
