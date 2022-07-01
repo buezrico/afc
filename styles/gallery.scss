@@ -15,6 +15,7 @@
       justify-content: space-around;
 
       .image-gallery-slide-wrapper {
+        // background-color: $dark;
         .image-gallery-swipe {
           display: flex;
           align-items: center;
@@ -47,18 +48,26 @@
                 img {
                   border-radius: 10px;
                   height: 100%;
-                  opacity: 0.8;
                 }
               }
             }
-            .image-gallery-thumbnail.active,
-            .image-gallery-thumbnail:focus,
-            .image-gallery-thumbnail:hover {
-              border: 2px solid $primary;
+          }
+        }
+      }
+    }
+  }
 
-              .image-gallery-thumbnail-inner {
-                img {
-                  opacity: 1;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 2rem;
+
+    .image-gallery {
+      .image-gallery-content {
+        .image-gallery-thumbnails-wrapper {
+          .image-gallery-thumbnails {
+            .image-gallery-thumbnails-container {
+              .image-gallery-thumbnail {
+                .image-gallery-thumbnail-inner {
+                  height: 3rem;
                 }
               }
             }
