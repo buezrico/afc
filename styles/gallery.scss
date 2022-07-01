@@ -1,53 +1,59 @@
 @import "./variable";
-
 .gallery {
-  height: 100vh;
-  padding-top: 6rem;
-  padding-bottom: 1rem;
+  .inner {
+    height: calc(100vh - 5rem);
+    // padding-top: 6rem;
+    padding: 1rem 0;
 
-  .image-gallery {
-    height: 100%;
-
-    .image-gallery-content {
+    background: $light;
+    .image-gallery {
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
 
-      .image-gallery-slide-wrapper {
-        // background-color: $dark;
-        .image-gallery-swipe {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          .image-gallery-slides {
-            .image-gallery-slide {
-              height: 25rem;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              img {
-                height: 100%;
+      .image-gallery-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .image-gallery-slide-wrapper {
+          // background-color: $dark;
+          .image-gallery-swipe {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .image-gallery-slides {
+              .image-gallery-slide {
+                height: 23rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                  height: 100%;
+                  object-fit: cover;
+                }
               }
             }
           }
         }
-      }
 
-      .image-gallery-thumbnails-wrapper {
-        .image-gallery-thumbnails {
-          padding: 0.5rem;
-          .image-gallery-thumbnails-container {
-            border-radius: 10px;
-            .image-gallery-thumbnail {
+        .image-gallery-thumbnails-wrapper {
+          border-top: 2px dashed $primary;
+          border-bottom: 2px dashed $primary;
+          .image-gallery-thumbnails {
+            padding: 0.5rem;
+            .image-gallery-thumbnails-container {
               border-radius: 10px;
-
-              .image-gallery-thumbnail-inner {
+              .image-gallery-thumbnail {
                 border-radius: 10px;
-                height: 4rem;
-                img {
+
+                .image-gallery-thumbnail-inner {
                   border-radius: 10px;
-                  height: 100%;
+                  height: 4rem;
+                  img {
+                    border-radius: 10px;
+                    height: 100%;
+                    object-fit: cover;
+                  }
                 }
               }
             }
@@ -55,19 +61,66 @@
         }
       }
     }
-  }
 
-  @media screen and (max-width: 768px) {
-    padding-bottom: 2rem;
+    @media screen and (max-width: 768px) {
+      padding-bottom: 2rem;
 
-    .image-gallery {
-      .image-gallery-content {
-        .image-gallery-thumbnails-wrapper {
-          .image-gallery-thumbnails {
-            .image-gallery-thumbnails-container {
-              .image-gallery-thumbnail {
-                .image-gallery-thumbnail-inner {
-                  height: 3rem;
+      .image-gallery {
+        .image-gallery-content {
+          .image-gallery-thumbnails-wrapper {
+            .image-gallery-thumbnails {
+              .image-gallery-thumbnails-container {
+                .image-gallery-thumbnail {
+                  .image-gallery-thumbnail-inner {
+                    height: 3rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 512px) {
+      padding: 2rem 0;
+
+      height: 80vh;
+
+      .image-gallery {
+        height: 100%;
+        // background-color: red;
+
+        .image-gallery-content {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          .image-gallery-slide-wrapper {
+            .image-gallery-swipe {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .image-gallery-slides {
+                .image-gallery-slide {
+                  height: 25rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  img {
+                    height: 100%;
+                  }
+                }
+              }
+            }
+          }
+          .image-gallery-thumbnails-wrapper {
+            .image-gallery-thumbnails {
+              .image-gallery-thumbnails-container {
+                .image-gallery-thumbnail {
+                  .image-gallery-thumbnail-inner {
+                    height: 3rem;
+                  }
                 }
               }
             }
