@@ -196,6 +196,7 @@ const About = () => {
                     width={30}
                     height={30}
                     alt="quote"
+                    unoptimized
                   />
                 </div>
                 <div className="title-text">
@@ -209,6 +210,7 @@ const About = () => {
                     height={30}
                     alt="quote"
                     className="img2"
+                    unoptimized
                   />
                 </div>
               </div>

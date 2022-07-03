@@ -263,7 +263,7 @@ export default function Home() {
                 src="/imgs/event.svg"
                 width={100}
                 height={100}
-                alt="become-a-meber"
+                alt="event"
                 unoptimized
               />
             </div>
@@ -285,7 +285,7 @@ export default function Home() {
               src="/imgs/gallery.svg"
               width={100}
               height={100}
-              alt="become-a-meber"
+              alt="gallery"
               unoptimized
             />
             <h5 className="fw-bold text-primary">OUR GALLERY</h5>
