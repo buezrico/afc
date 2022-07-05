@@ -9,8 +9,8 @@ const MyGallery = ({ images }) => {
   const mappedImages = [
     images.data.map((image) => {
       return {
-        original: `https://afcadmin.herokuapp.com${image.attributes.img.data.attributes.url}`,
-        thumbnail: `https://afcadmin.herokuapp.com${image.attributes.img.data.attributes.formats.thumbnail.url}`,
+        original: `${image.attributes.img.data.attributes.url}`,
+        thumbnail: `${image.attributes.img.data.attributes.formats.thumbnail.url}`,
       };
     }),
   ];
