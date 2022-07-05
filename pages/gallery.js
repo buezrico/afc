@@ -7,12 +7,14 @@ const URL = process.env.STRAPIBASEURL;
 
 const MyGallery = ({ images }) => {
   const mappedImages = [
-    images.data.map((image) => {
-      return {
-        original: `https://conservative-mountie-47338.herokuapp.com${image.attributes.img.data.attributes.url}`,
-        thumbnail: `https://conservative-mountie-47338.herokuapp.com${image.attributes.img.data.attributes.formats.thumbnail.url}`,
-      };
-    }),
+    images.data
+      .sort((a, b) => b.id - a.id)
+      .map((image) => {
+        return {
+          original: `${image.attributes.img.data.attributes.url}`,
+          thumbnail: `${image.attributes.img.data.attributes.formats.thumbnail.url}`,
+        };
+      }),
   ];
 
   console.log(mappedImages);
@@ -31,7 +33,13 @@ const MyGallery = ({ images }) => {
       />
 
       <div className="inner">
-        <ImageGallery items={mappedImages[0]} infinite={false} />
+        <ImageGallery
+          items={mappedImages[0]}
+          lazyLoading={true}
+          autoPlay={true}
+          showBullets={true}
+          onErrorImageURL="/imgs/afclogo.png"
+        />
       </div>
     </div>
   );
@@ -40,7 +48,7 @@ export default MyGallery;
 
 export async function getServerSideProps() {
   const res = await fetch(
-    "https://conservative-mountie-47338.herokuapp.com/api/images/?populate=*"
+    "https://afc-admin.herokuapp.com/api/images/?populate=*"
   );
   const images = await res.json();
   return {

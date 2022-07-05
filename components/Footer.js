@@ -49,6 +49,9 @@ const Footer = () => {
             </Link>
             <Link href="/events">
               <li className="nav-item">Our Events</li>
+            </Link>
+            <Link href="/gallery">
+              <li className="nav-item">Our Gallery</li>
             </Link>{" "}
             <Link href="/contact">
               <li className="nav-item">Contact Us</li>
