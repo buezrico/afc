@@ -48,7 +48,7 @@ export default MyGallery;
 
 export async function getServerSideProps() {
   const res = await fetch(
-    "https://afcadmin.herokuapp.com/api/images/?populate=*"
+    "https://afc-admin.herokuapp.com/api/images/?populate=*"
   );
   const images = await res.json();
   return {
