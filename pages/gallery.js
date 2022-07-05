@@ -9,8 +9,8 @@ const MyGallery = ({ images }) => {
   const mappedImages = [
     images.data.map((image) => {
       return {
-        original: `https://conservative-mountie-47338.herokuapp.com${image.attributes.img.data.attributes.url}`,
-        thumbnail: `https://conservative-mountie-47338.herokuapp.com${image.attributes.img.data.attributes.formats.thumbnail.url}`,
+        original: `https://afcAdmin.herokuapp.com${image.attributes.img.data.attributes.url}`,
+        thumbnail: `https://afcAdmin.herokuapp.com${image.attributes.img.data.attributes.formats.thumbnail.url}`,
       };
     }),
   ];
@@ -46,7 +46,7 @@ export default MyGallery;
 
 export async function getServerSideProps() {
   const res = await fetch(
-    "https://conservative-mountie-47338.herokuapp.com/api/images/?populate=*"
+    "https://afcAdmin.herokuapp.com/api/images/?populate=*"
   );
   const images = await res.json();
   return {
