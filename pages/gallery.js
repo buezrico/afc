@@ -7,12 +7,14 @@ const URL = process.env.STRAPIBASEURL;
 
 const MyGallery = ({ images }) => {
   const mappedImages = [
-    images.data.map((image) => {
-      return {
-        original: `${image.attributes.img.data.attributes.url}`,
-        thumbnail: `${image.attributes.img.data.attributes.formats.thumbnail.url}`,
-      };
-    }),
+    images.data
+      .sort((a, b) => b.id - a.id)
+      .map((image) => {
+        return {
+          original: `${image.attributes.img.data.attributes.url}`,
+          thumbnail: `${image.attributes.img.data.attributes.formats.thumbnail.url}`,
+        };
+      }),
   ];
 
   console.log(mappedImages);
