@@ -68,7 +68,7 @@ const Register = () => {
           <div className="register-text">
             <p>
               Congratulations on your decision to join Ahoada West Local
-              Government Area Female Connect (AFC)
+              Government Area Female Connect (AFC).
             </p>
 
             <p>
