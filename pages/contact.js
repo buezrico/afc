@@ -36,6 +36,12 @@ const Contact = () => {
               <input type="hidden" name="form-name" value="contact" />
 
               <input type="text" name="name" placeholder="Name" required />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                required
+              />
               <input type="text" name="email" placeholder="Email" required />
               <textarea
                 name="message"
