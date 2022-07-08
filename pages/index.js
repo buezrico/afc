@@ -57,7 +57,7 @@ export default function Home() {
                 We are driven by 3 core objectives:
                 <br /> - To provide a responsive, supportive, and innovative
                 service. <br /> - To be a catalyst for community development.
-                <br /> - To grow and sustain an effective organization
+                <br /> - To grow and sustain an effective organization.
               </p>
               <div className="about-pic-alt">
                 <Image

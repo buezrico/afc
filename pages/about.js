@@ -23,7 +23,7 @@ const About = () => {
             We are driven by 3 core objectives:
             <br /> - To provide a responsive, supportive, and innovative
             service. <br /> - To be a catalyst for community development.
-            <br /> - To grow and sustain an effective organization
+            <br /> - To grow and sustain an effective organization.
           </p>
         </div>
         <div className="about-intro-img">
@@ -50,7 +50,7 @@ const About = () => {
             We are driven by 3 core objectives:
             <br /> - To provide a responsive, supportive, and innovative
             service. <br /> - To be a catalyst for community development.
-            <br /> - To grow and sustain an effective organization
+            <br /> - To grow and sustain an effective organization.
           </p>
         </div>
       </section>
@@ -69,11 +69,11 @@ const About = () => {
               </li>
               <li className="target">
                 <i className="fas fa-crosshairs"></i>
-                <p>Support 3 members in business</p>
+                <p>Support 3 members in business.</p>
               </li>
               <li className="target">
                 <i className="fas fa-crosshairs"></i>
-                <p>Register 20 AFC members in JAMB</p>
+                <p>Register 20 AFC members in JAMB.</p>
               </li>
               <li className="target">
                 <i className="fas fa-crosshairs"></i>
@@ -115,7 +115,7 @@ const About = () => {
             <i className="fas fa-bullseye"></i>
             <p>
               Build sustainable revenue through a variety of restricted and
-              unrestricted income streams
+              unrestricted income streams.
             </p>
           </li>
           <li className="objective">
@@ -136,7 +136,7 @@ const About = () => {
             <i className="fas fa-bullseye"></i>
             <p>
               Ensure sound organizational governance through an appropriately
-              skilled Board of Directors
+              skilled Board of Directors.
             </p>
           </li>
           <li className="objective">
@@ -150,7 +150,7 @@ const About = () => {
             <i className="fas fa-bullseye"></i>
             <p>
               Promote and share AFC best practices with relevant community,
-              voluntary and statutory sectors
+              voluntary and statutory sectors.
             </p>
           </li>
           <li className="objective">
@@ -164,7 +164,7 @@ const About = () => {
             <i className="fas fa-bullseye"></i>
             <p>
               Provide a safe, secured, and fit for purpose learning and working
-              environment
+              environment.
             </p>
           </li>
           <li className="objective">

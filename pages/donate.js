@@ -13,6 +13,7 @@ const Donate = () => {
   const [amount, setAmount] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [info, setInfo] = useState("");
 
   const [canSubmit, setCanSubmit] = useState(false);
 
