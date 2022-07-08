@@ -269,7 +269,6 @@ const Register = () => {
                 !address ||
                 !SOR ||
                 !LGA ||
-                !ward ||
                 !EQ ||
                 !occupation ||
                 !terms
