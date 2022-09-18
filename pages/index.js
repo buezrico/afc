@@ -12,8 +12,12 @@ export default function Home() {
       </Head>
       <header>
         <div className="inner">
-          <h1>
+          {/* <h1>
             We are <span>A.F.C</span>, coming out stronger together for a better
+            tomorrow
+          </h1> */}
+          <h1>
+            We are <span>A.F.C</span>, coming together, connecting for a better
             tomorrow
           </h1>
           <small>

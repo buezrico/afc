@@ -11,8 +11,8 @@ const MyGallery = ({ images }) => {
       .sort((a, b) => b.id - a.id)
       .map((image) => {
         return {
-          original: `${image.attributes.img.data.attributes.url}`,
-          thumbnail: `${image.attributes.img.data.attributes.formats.thumbnail.url}`,
+          original: `${image.attributes.img.data?.attributes.url}`,
+          thumbnail: `${image.attributes.img.data?.attributes.formats.thumbnail.url}`,
         };
       }),
   ];
@@ -35,8 +35,7 @@ const MyGallery = ({ images }) => {
       <div className="inner">
         <ImageGallery
           items={mappedImages[0]}
-          lazyLoading={true}
-          autoPlay={true}
+          // autoPlay={true}
           showBullets={true}
           onErrorImageURL="/imgs/afclogo.png"
         />
