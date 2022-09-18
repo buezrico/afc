@@ -35,7 +35,7 @@ const MyGallery = ({ images }) => {
       <div className="inner">
         <ImageGallery
           items={mappedImages[0]}
-          autoPlay={true}
+          // autoPlay={true}
           showBullets={true}
           onErrorImageURL="/imgs/afclogo.png"
         />
