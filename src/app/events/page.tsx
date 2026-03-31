@@ -50,7 +50,7 @@ export default function EventsPage() {
         <span className="text-xs font-semibold uppercase tracking-widest text-accent">
           Community Gatherings
         </span>
-        <h1 className="mt-3 max-w-md font-display text-4xl font-bold leading-tight text-primary-dark md:text-5xl">
+        <h1 className="mt-3 max-w-md text-4xl font-bold leading-tight text-primary-dark md:text-5xl">
           Our Impact
           <br />
           in Motion.
@@ -64,7 +64,7 @@ export default function EventsPage() {
           </p>
           <div className="flex gap-10">
             <div>
-              <p className="font-display text-3xl font-bold text-primary-dark">
+              <p className="text-3xl font-bold text-primary-dark">
                 24+
               </p>
               <p className="text-xs font-semibold uppercase tracking-wider text-muted">
@@ -72,7 +72,7 @@ export default function EventsPage() {
               </p>
             </div>
             <div>
-              <p className="font-display text-3xl font-bold text-primary-dark">
+              <p className="text-3xl font-bold text-primary-dark">
                 5k
               </p>
               <p className="text-xs font-semibold uppercase tracking-wider text-muted">
@@ -87,7 +87,7 @@ export default function EventsPage() {
       <section className="mx-auto max-w-7xl px-6 pb-20">
         <div className="mb-8 flex items-center gap-3">
           <span className="h-0.5 w-8 bg-accent" />
-          <h2 className="font-display text-xl font-bold text-primary-dark">
+          <h2 className="text-xl font-bold text-primary-dark">
             Upcoming Events
           </h2>
         </div>
@@ -116,7 +116,7 @@ export default function EventsPage() {
                   </svg>
                   {event.date}
                 </p>
-                <h3 className="mt-2 font-display text-lg font-bold text-primary-dark">
+                <h3 className="mt-2 text-lg font-bold text-primary-dark">
                   {event.title}
                 </h3>
                 <p className="mt-2 text-sm text-muted">{event.description}</p>
@@ -138,7 +138,7 @@ export default function EventsPage() {
             <svg className="h-8 w-8 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
-            <h3 className="mt-4 font-display text-2xl font-bold text-primary-dark">
+            <h3 className="mt-4 text-2xl font-bold text-primary-dark">
               Host your own event with AFC support.
             </h3>
             <p className="mt-3 text-sm text-primary-dark/70">
@@ -159,7 +159,7 @@ export default function EventsPage() {
       <section className="mx-auto max-w-7xl px-6 pb-20">
         <div className="flex items-end justify-between">
           <div>
-            <h2 className="font-display text-3xl font-bold text-primary-dark">
+            <h2 className="text-3xl font-bold text-primary-dark">
               Past Highlights
             </h2>
             <p className="mt-1 text-sm text-muted">
@@ -195,7 +195,7 @@ export default function EventsPage() {
               <p className="text-xs text-muted">
                 December 12, 2023 &middot; Rivers State Art Centre
               </p>
-              <h3 className="mt-2 font-display text-xl font-bold text-primary-dark">
+              <h3 className="mt-2 text-xl font-bold text-primary-dark">
                 Annual Heritage &amp; Innovation Gala
               </h3>
               <p className="mt-2 text-sm text-muted">

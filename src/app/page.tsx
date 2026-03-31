@@ -21,7 +21,7 @@ export default function HomePage() {
             Founded May 2021
           </span>
 
-          <h1 className="mt-6 max-w-2xl font-display text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+          <h1 className="mt-6 max-w-2xl text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
             Empowering Young Women, Shaping the Future of Rivers State
           </h1>
 
@@ -68,7 +68,7 @@ export default function HomePage() {
                 />
               </svg>
             </div>
-            <h3 className="mt-6 font-display text-xl font-bold text-primary-dark">
+            <h3 className="mt-6 text-xl font-bold text-primary-dark">
               Our Mission
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-muted">
@@ -102,7 +102,7 @@ export default function HomePage() {
                 />
               </svg>
             </div>
-            <h3 className="mt-6 font-display text-xl font-bold text-primary-dark">
+            <h3 className="mt-6 text-xl font-bold text-primary-dark">
               Our Vision
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-muted">
@@ -121,7 +121,7 @@ export default function HomePage() {
           <span className="text-xs font-semibold uppercase tracking-widest text-accent">
             Our Reach
           </span>
-          <h2 className="mt-3 max-w-md font-display text-3xl font-bold text-white md:text-4xl">
+          <h2 className="mt-3 max-w-md text-3xl font-bold text-white md:text-4xl">
             Numbers that tell a story of resilience
           </h2>
 
@@ -169,7 +169,7 @@ export default function HomePage() {
                 <div className={stat.accent ? "text-primary-dark" : "text-accent"}>
                   {stat.icon}
                 </div>
-                <p className="mt-4 font-display text-4xl font-bold">{stat.value}</p>
+                <p className="mt-4 text-4xl font-bold">{stat.value}</p>
                 <p className={`mt-1 text-sm ${stat.accent ? "text-primary-dark/70" : "text-gray-400"}`}>
                   {stat.label}
                 </p>
@@ -182,7 +182,7 @@ export default function HomePage() {
       {/* ───── Gallery Preview ───── */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="text-center">
-          <h2 className="font-display text-3xl font-bold text-primary-dark md:text-4xl">
+          <h2 className="text-3xl font-bold text-primary-dark md:text-4xl">
             Capturing the Moment
           </h2>
           <p className="mt-3 text-sm text-muted">

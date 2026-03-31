@@ -31,7 +31,7 @@ export default function GalleryPage() {
         <span className="text-xs font-semibold uppercase tracking-widest text-accent">
           Capturing Resilience
         </span>
-        <h1 className="mt-3 font-display text-4xl font-bold text-primary-dark md:text-5xl">
+        <h1 className="mt-3 text-4xl font-bold text-primary-dark md:text-5xl">
           Impact in <span className="text-accent">Motion.</span>
         </h1>
         <p className="mt-4 max-w-lg text-sm leading-relaxed text-muted">

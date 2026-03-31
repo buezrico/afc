@@ -14,7 +14,7 @@ export function NewsletterCTA({
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-md">
-            <h2 className="font-display text-3xl font-bold text-white md:text-4xl">
+            <h2 className="text-3xl font-bold text-white md:text-4xl">
               {heading}
             </h2>
             <p className="mt-3 text-sm text-gray-400">{subtitle}</p>

@@ -6,13 +6,13 @@ export default function ContactPage() {
   return (
     <>
       {/* ───── Hero ───── */}
-      <section className="bg-primary">
+      <section className="bg-primary-dark">
         <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
           <div className="flex flex-col justify-center px-6 py-16 lg:py-24">
             <span className="inline-block w-fit rounded-full bg-accent px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary-dark">
               Get in Touch
             </span>
-            <h1 className="mt-6 font-display text-4xl font-bold leading-tight text-white md:text-5xl">
+            <h1 className="mt-6 text-4xl font-bold leading-tight text-white md:text-5xl">
               Let&apos;s start a{" "}
               <span className="text-accent">conversation.</span>
             </h1>
@@ -39,7 +39,7 @@ export default function ContactPage() {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Left — Contact Information */}
           <div>
-            <h2 className="font-display text-2xl font-bold text-primary-dark">
+            <h2 className="text-2xl font-bold text-primary-dark">
               Contact Information
             </h2>
 
@@ -121,7 +121,7 @@ export default function ContactPage() {
 
           {/* Right — Contact Form */}
           <div>
-            <h2 className="font-display text-2xl font-bold text-primary-dark">
+            <h2 className="text-2xl font-bold text-primary-dark">
               Send us a message
             </h2>
             <p className="mt-2 text-sm text-muted">
@@ -196,7 +196,7 @@ export default function ContactPage() {
       {/* ───── Social CTA ───── */}
       <section className="mx-auto max-w-7xl px-6 pb-20">
         <div className="rounded-2xl bg-light-bg p-12 text-center">
-          <h2 className="font-display text-2xl font-bold text-primary-dark">
+          <h2 className="text-2xl font-bold text-primary-dark">
             Join our growing community
           </h2>
           <p className="mt-2 text-sm text-muted">

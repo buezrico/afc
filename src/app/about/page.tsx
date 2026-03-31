@@ -45,8 +45,8 @@ export default function AboutPage() {
   return (
     <>
       {/* ───── Hero ───── */}
-      <section className="relative bg-primary min-h-100 flex items-end overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-primary via-primary-dark to-primary-dark opacity-90" />
+      <section className="relative bg-primary-dark min-h-100 flex items-end overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-primary-dark via-primary-dark/90 to-primary/80 opacity-90" />
         <Image
           src="/images/hero-about.jpg"
           alt="Empowering female youth"
@@ -58,7 +58,7 @@ export default function AboutPage() {
           <span className="inline-block rounded-full bg-accent px-4 py-1 text-xs font-semibold uppercase tracking-wider text-primary-dark">
             Our Legacy
           </span>
-          <h1 className="mt-6 max-w-lg font-display text-4xl font-bold leading-tight text-white md:text-5xl">
+          <h1 className="mt-6 max-w-lg text-4xl font-bold leading-tight text-white md:text-5xl">
             Empowering the Female Youth of Rivers State.
           </h1>
         </div>
@@ -68,7 +68,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="font-display text-3xl font-bold text-primary-dark">
+            <h2 className="text-3xl font-bold text-primary-dark">
               Founded in May 2021
             </h2>
             <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted">
@@ -120,7 +120,7 @@ export default function AboutPage() {
       <section className="bg-light-bg">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="text-center">
-            <h2 className="font-display text-3xl font-bold text-primary-dark">
+            <h2 className="text-3xl font-bold text-primary-dark">
               Our Core Objectives
             </h2>
             <p className="mt-3 text-sm text-muted">
@@ -138,7 +138,7 @@ export default function AboutPage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   {obj.icon}
                 </div>
-                <h3 className="mt-5 font-display text-lg font-bold text-primary-dark">
+                <h3 className="mt-5 text-lg font-bold text-primary-dark">
                   {obj.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">
@@ -154,7 +154,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <h2 className="font-display text-3xl font-bold text-primary-dark">
+            <h2 className="text-3xl font-bold text-primary-dark">
               The Visionaries Behind AFC
             </h2>
             <p className="mt-2 max-w-lg text-sm text-muted">
@@ -200,7 +200,7 @@ export default function AboutPage() {
       {/* ───── CTA Section ───── */}
       <section className="bg-dark-bg">
         <div className="mx-auto max-w-7xl px-6 py-20 text-center">
-          <h2 className="mx-auto max-w-xl font-display text-3xl font-bold text-white md:text-4xl">
+          <h2 className="mx-auto max-w-xl text-3xl font-bold text-white md:text-4xl">
             Be part of our growing community and shape the future together.
           </h2>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
